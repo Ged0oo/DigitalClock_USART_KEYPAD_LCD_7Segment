@@ -1,0 +1,147 @@
+ /* 
+ * File:   application.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
+ */
+
+
+#include "application.h"
+void welcomeMessage();
+Std_ReturnType ret = E_NOT_OK;
+uint8 hour_1=47 , hour_2=47 , sec_1=47, sec_2=47, min_1=47 , min_2=47, KeypadPressed=47;
+uint8 time[6]={47 ,47 ,47 ,47 ,47 ,47 } ;
+uint8 counter;
+
+
+chr_lcd_4bit_t lcd_1 =
+{
+	.lcd_rs.port=PORTD_INDEX,
+	.lcd_rs.pin=GPIO_PIN0,
+	.lcd_rs.direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_rs.logic=GPIO_LOW,
+	
+    .lcd_en.port=PORTD_INDEX,
+	.lcd_en.pin=GPIO_PIN1,
+	.lcd_en.direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_en.logic=GPIO_LOW,
+	
+    .lcd_data[0].port=PORTD_INDEX,
+	.lcd_data[0].pin=GPIO_PIN2,
+	.lcd_data[0].direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_data[0].logic=GPIO_LOW,
+	
+    .lcd_data[1].port=PORTD_INDEX,
+	.lcd_data[1].pin=GPIO_PIN3,
+	.lcd_data[1].direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_data[1].logic=GPIO_LOW,
+	
+    .lcd_data[2].port=PORTD_INDEX,
+	.lcd_data[2].pin=GPIO_PIN4,
+	.lcd_data[2].direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_data[2].logic=GPIO_LOW,
+	
+    .lcd_data[3].port=PORTD_INDEX,
+	.lcd_data[3].pin=GPIO_PIN5,
+	.lcd_data[3].direction=GPIO_DIRECTION_OUTPUT,
+	.lcd_data[3].logic=GPIO_LOW,
+	
+};
+
+
+keypad_t keypad_1 =
+{
+	.keypad_row_pins[0].port=PORTB_INDEX,
+	.keypad_row_pins[0].pin=GPIO_PIN0,
+	.keypad_row_pins[0].direction=GPIO_DIRECTION_OUTPUT,
+	.keypad_row_pins[0].logic=GPIO_LOW,	
+	
+    .keypad_row_pins[1].port=PORTB_INDEX,
+	.keypad_row_pins[1].pin=GPIO_PIN1,
+	.keypad_row_pins[1].direction=GPIO_DIRECTION_OUTPUT,
+	.keypad_row_pins[1].logic=GPIO_LOW,
+	
+    .keypad_row_pins[2].port=PORTB_INDEX,
+	.keypad_row_pins[2].pin=GPIO_PIN2,
+	.keypad_row_pins[2].direction=GPIO_DIRECTION_OUTPUT,
+	.keypad_row_pins[2].logic=GPIO_LOW,
+	
+    .keypad_row_pins[3].port=PORTB_INDEX,
+	.keypad_row_pins[3].pin=GPIO_PIN3,
+	.keypad_row_pins[3].direction=GPIO_DIRECTION_OUTPUT,
+	.keypad_row_pins[3].logic=GPIO_LOW,
+	
+    .keypad_columns_pins[0].port=PORTB_INDEX,
+	.keypad_columns_pins[0].pin=GPIO_PIN4,
+	.keypad_columns_pins[0].direction=GPIO_DIRECTION_INPUT,
+    .keypad_columns_pins[0].logic=GPIO_LOW,
+	
+    .keypad_columns_pins[1].port=PORTB_INDEX,
+	.keypad_columns_pins[1].pin=GPIO_PIN5,
+	.keypad_columns_pins[1].direction=GPIO_DIRECTION_INPUT,
+	.keypad_columns_pins[1].logic=GPIO_LOW,
+	
+    .keypad_columns_pins[2].port=PORTB_INDEX,
+	.keypad_columns_pins[2].pin=GPIO_PIN6,
+	.keypad_columns_pins[2].direction=GPIO_DIRECTION_INPUT,
+	.keypad_columns_pins[2].logic=GPIO_LOW,
+	
+    .keypad_columns_pins[3].port=PORTB_INDEX,
+	.keypad_columns_pins[3].pin=GPIO_PIN7,
+	.keypad_columns_pins[3].direction=GPIO_DIRECTION_INPUT,
+	.keypad_columns_pins[3].logic=GPIO_LOW,				
+};
+
+
+
+int main()
+{ 
+    application_intialize();
+    welcomeMessage();
+    while(1)
+    {
+        counter = 0;
+        ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1, "Press 1 To Set the  Time : ");
+        ret = keypad_get_value(&keypad_1, &KeypadPressed);
+        if(KeypadPressed != 47)
+        {
+            ret = lcd_4bit_send_char_data_pos(&lcd_1, 3, 8, KeypadPressed);
+            __delay_ms(500);
+            ret = lcd_4bit_send_command(&lcd_1, _LCD_CLEAR);
+        
+            if(KeypadPressed == '1')
+            {
+                KeypadPressed = 47;
+                ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1, "Houres : "); 
+                do
+                {
+                    ret = keypad_get_value(&keypad_1, &(time[counter]));
+                }
+                while(time[counter] == 47);
+                ret = lcd_4bit_send_char_data_pos(&lcd_1, 1, 11, time[counter]-48);
+                counter++;
+            }
+            else
+            {
+                ret = lcd_4bit_send_string_pos(&lcd_1, 2, 2, "Wrong Choice !");
+                __delay_ms(500);   
+                ret = lcd_4bit_send_command(&lcd_1, _LCD_CLEAR);
+            }
+            KeypadPressed = 47;
+        }     
+    }
+    return (EXIT_SUCCESS);
+}
+
+void application_intialize(void)
+{
+    ret = lcd_4bit_intialize(&lcd_1);
+    ret = keypad_initialize(&keypad_1);
+}
+
+void welcomeMessage()
+{
+    ret = lcd_4bit_send_string_pos(&lcd_1, 2, 7, "Welcome.");
+    __delay_ms(1000);
+    ret = lcd_4bit_send_command(&lcd_1, _LCD_CLEAR);
+}

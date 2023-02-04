@@ -1,0 +1,3 @@
+# DigitalClock_USART_KEYPAD_LCD_7Segment
+Digital Clock by interfacing with keypad and 4x20 LCD with addition to reconfigurable option of the time, the first MCU Interfaces LCD and Keypad and the second one interfaces the 8CA 7-Segment with one 7447 decoder works with multiplexing principle, the two MCUs are connected throw the UART , the fist MCU gets the time configration from the user and send it by the UART the second one receives the them and configure the 7-segment clock
+It has time Valditaion option to check if the user enters right numbers or not and check if these numbers are real numbers to clock or not.
