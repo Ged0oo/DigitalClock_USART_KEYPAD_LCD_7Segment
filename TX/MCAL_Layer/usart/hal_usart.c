@@ -1,6 +1,8 @@
-/* 
+ /* 
  * File:   hal_usart.c
- * Author: Ahmed Abd El-Ghafar
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #include "hal_usart.h"
@@ -92,38 +94,6 @@ Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data, uint16 str_len){
     }
     return ret;
 }
-
-
-
-
-
-
-
-
-
-void USART_Read_string(char *buffer, unsigned char len)
-{
-    char i;    // Length counter
-    unsigned char data;
-
-    for(i=0;i<len;i++)  // Only retrieve len characters
-    {
-        while(!PIR1bits.RCIF);// Wait for data to be received
-
-        data = RCREG;    // Get a character from the USART
-                               // and save in the string
-        *buffer = data;
-        buffer++;              // Increment the string pointer
-    }
-}
-
-
-
-
-
-
-
-
 
 Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data){
     

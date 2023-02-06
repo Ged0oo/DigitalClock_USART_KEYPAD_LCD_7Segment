@@ -1,8 +1,8 @@
 /* 
- * File:   ecu_chr_lcd.h
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on February 9, 2021, 9:48 PM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef ECU_CHR_LCD_H

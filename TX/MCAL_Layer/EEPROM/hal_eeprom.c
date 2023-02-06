@@ -1,9 +1,10 @@
 /* 
  * File:   hal_eeprom.c
- * Author: Ahmed Abd El-Ghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on May 15, 2021, 11:09 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #include "hal_eeprom.h"
 

@@ -1,8 +1,8 @@
 /* 
- * File:   hal_adc_cfg.h
- * Author: Ahmed Abd El-Ghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on March 26, 2021, 7:24 PM
+ * File:   hal_adc_cfg.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef HAL_ADC_CFG_H

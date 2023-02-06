@@ -1138,8 +1138,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v __ccp_obj `*CS277 ~T0 @X0 1 r1 ]
 [f ]
 "271
-[; ;MCAL_Layer/CCP/hal_ccp.c: 271:     PR2 = (uint8)(((float)8000000UL / ((float)_ccp_obj->PWM_Frequency * 4.0 * (float)_ccp_obj->timer2_prescaler_value *
-[e = _PR2 -> - / -> -> -> 8000000 `ul `f `d * * * -> -> . *U __ccp_obj 5 `f `d .4.0 -> -> . *U __ccp_obj 7 `f `d -> -> . *U __ccp_obj 6 `f `d -> -> 1 `i `d `uc ]
+[; ;MCAL_Layer/CCP/hal_ccp.c: 271:     PR2 = (uint8)(((float)4000000UL / ((float)_ccp_obj->PWM_Frequency * 4.0 * (float)_ccp_obj->timer2_prescaler_value *
+[e = _PR2 -> - / -> -> -> 4000000 `ul `f `d * * * -> -> . *U __ccp_obj 5 `f `d .4.0 -> -> . *U __ccp_obj 7 `f `d -> -> . *U __ccp_obj 6 `f `d -> -> 1 `i `d `uc ]
 "274
 [; ;MCAL_Layer/CCP/hal_ccp.c: 274:     if(CCP1_INST == _ccp_obj->ccp_inst){
 [e $ ! == -> . `E3011 0 `ui -> . *U __ccp_obj 0 `ui 330  ]

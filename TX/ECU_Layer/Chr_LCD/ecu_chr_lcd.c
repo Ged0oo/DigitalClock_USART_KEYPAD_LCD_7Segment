@@ -1,8 +1,8 @@
 /* 
- * File:   ecu_chr_lcd.c
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on February 9, 2021, 9:48 PM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #include "ecu_chr_lcd.h"
@@ -544,4 +544,3 @@ static Std_ReturnType lcd_4bit_set_cursor(const chr_lcd_4bit_t *lcd, uint8 row, 
     }
     return ret;
 }
-

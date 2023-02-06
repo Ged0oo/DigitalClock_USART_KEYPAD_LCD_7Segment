@@ -1,8 +1,8 @@
 /* 
  * File:   mcal_interrupt_gen_cfg.h
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on February 19, 2021, 11:28 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef MCAL_INTERRUPT_GEN_CFG_H

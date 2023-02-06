@@ -1,8 +1,8 @@
 /* 
- * File:   ecu_keypad.c
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on February 6, 2021, 2:23 PM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #include "ecu_keypad.h"

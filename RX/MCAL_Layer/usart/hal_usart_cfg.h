@@ -1,6 +1,8 @@
-/* 
+ /* 
  * File:   hal_usart_cfg.h
- * Author: Ahmed Abd El-Ghafar
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef HAL_USART_CFG_H

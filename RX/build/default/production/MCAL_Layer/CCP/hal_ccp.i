@@ -4930,7 +4930,7 @@ void CCP2_ISR(void){
 
 static void CCP_PWM_Mode_Config(const ccp_t *_ccp_obj){
 
-    PR2 = (uint8)(((float)8000000UL / ((float)_ccp_obj->PWM_Frequency * 4.0 * (float)_ccp_obj->timer2_prescaler_value *
+    PR2 = (uint8)(((float)4000000UL / ((float)_ccp_obj->PWM_Frequency * 4.0 * (float)_ccp_obj->timer2_prescaler_value *
                     (float)_ccp_obj->timer2_postscaler_value)) - 1);
 
     if(CCP1_INST == _ccp_obj->ccp_inst){

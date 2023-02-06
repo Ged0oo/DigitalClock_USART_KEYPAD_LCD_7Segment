@@ -1,8 +1,8 @@
 /* 
- * File:   ecu_dc_motor_cfg.h
- * Author: Ahmed.Elghafar
- *
- * Created on January 8, 2021, 10:48 AM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef ECU_DC_MOTOR_CFG_H

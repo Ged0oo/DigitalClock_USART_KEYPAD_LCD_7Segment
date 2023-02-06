@@ -1,10 +1,11 @@
 /* 
- * File:   ecu_led.c
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on November 28, 2020, 9:51 PM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
-
+ 
+ 
 #include "ecu_led.h"
 
 /**

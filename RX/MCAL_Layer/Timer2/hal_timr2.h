@@ -1,8 +1,8 @@
 /* 
  * File:   hal_timr2.h
- * Author: Ahmed Abd El-Ghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on May 13, 2021, 11:30 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef HAL_TIMR2_H

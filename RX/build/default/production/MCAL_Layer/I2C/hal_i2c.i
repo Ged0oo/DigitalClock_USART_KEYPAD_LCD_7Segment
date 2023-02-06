@@ -4983,7 +4983,7 @@ static __attribute__((inline)) void MSSP_I2C_Mode_GPIO_CFG(void){
 static __attribute__((inline)) void I2C_Master_Mode_Clock_Configurations(const mssp_i2c_t *i2c_obj){
 
     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
-    SSPADD = (uint8)(((8000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
+    SSPADD = (uint8)(((4000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
 }
 
 static __attribute__((inline)) void I2C_Slave_Mode_Configurations(const mssp_i2c_t *i2c_obj){

@@ -14,7 +14,6 @@
 
 
 
-
 # 1 "./application.h" 1
 # 12 "./application.h"
 # 1 "./ECU_Layer/ecu_layer_init.h" 1
@@ -4847,91 +4846,18 @@ Std_ReturnType convert_uint32_to_string(uint32 value, uint8 *str);
 void ecu_layer_intialize(void);
 # 12 "./application.h" 2
 
-# 1 "./MCAL_Layer/usart/hal_usart.h" 1
-# 13 "./MCAL_Layer/usart/hal_usart.h"
-# 1 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
-# 12 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
-# 1 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
-# 15 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
-# 1 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
-# 15 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
-# 54 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+# 1 "./MCAL_Layer/Interrupt/mcal_external_interrupt.h" 1
+# 12 "./MCAL_Layer/Interrupt/mcal_external_interrupt.h"
+# 1 "./MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
+# 15 "./MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+# 1 "./MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
+# 15 "./MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
+# 54 "./MCAL_Layer/Interrupt/mcal_interrupt_config.h"
 typedef enum{
     INTERRUPT_LOW_PRIORITY = 0,
     INTERRUPT_HIGH_PRIORITY
 }interrupt_priority_cfg;
-# 12 "./MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 2
-# 13 "./MCAL_Layer/usart/hal_usart.h" 2
-
-# 1 "./MCAL_Layer/usart/hal_usart_cfg.h" 1
-# 14 "./MCAL_Layer/usart/hal_usart.h" 2
-# 61 "./MCAL_Layer/usart/hal_usart.h"
-typedef enum{
-    BAUDRATE_ASYN_8BIT_lOW_SPEED,
-    BAUDRATE_ASYN_8BIT_HIGH_SPEED,
-    BAUDRATE_ASYN_16BIT_lOW_SPEED,
-    BAUDRATE_ASYN_16BIT_HIGH_SPEED,
-    BAUDRATE_SYN_8BIT,
-    BAUDRATE_SYN_16BIT
-}baudrate_gen_t;
-
-typedef struct{
-    interrupt_priority_cfg usart_tx_int_priority;
- uint8 usart_tx_enable : 1;
- uint8 usart_tx_interrupt_enable : 1;
- uint8 usart_tx_9bit_enable : 1;
-    uint8 usart_tx_reserved : 5;
-}usart_tx_cfg_t;
-
-typedef struct{
-    interrupt_priority_cfg usart_rx_int_priority;
- uint8 usart_rx_enable : 1;
- uint8 usart_rx_interrupt_enable : 1;
- uint8 usart_rx_9bit_enable : 1;
-    uint8 usart_rx_reserved : 5;
-}usart_rx_cfg_t;
-
-typedef union{
- struct{
-  uint8 usart_tx_reserved : 6;
-  uint8 usart_ferr : 1;
-  uint8 usart_oerr : 1;
- };
- uint8 status;
-}usart_error_status_t;
-
-typedef struct{
-    uint32 baudrate;
-    baudrate_gen_t baudrate_gen_gonfig;
-    usart_tx_cfg_t usart_tx_cfg;
- usart_rx_cfg_t usart_rx_cfg;
- usart_error_status_t error_status;
- void (*EUSART_TxDefaultInterruptHandler)(void);
-    void (*EUSART_RxDefaultInterruptHandler)(void);
-    void (*EUSART_FramingErrorHandler)(void);
-    void (*EUSART_OverrunErrorHandler)(void);
-}usart_t;
-
-
-Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart);
-Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart);
-
-Std_ReturnType EUSART_ASYNC_ReadByteBlocking(uint8 *_data);
-Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(uint8 *_data);
-Std_ReturnType EUSART_ASYNC_RX_Restart(void);
-
-Std_ReturnType EUSART_ASYNC_WriteByteBlocking(uint8 _data);
-Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data, uint16 str_len);
-Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data);
-Std_ReturnType EUSART_ASYNC_WriteStringNonBlocking(uint8 *_data, uint16 str_len);
-
-
-
-void USART_Read_string(char *buffer, unsigned char len);
-# 13 "./application.h" 2
-
-
-# 1 "./MCAL_Layer/Interrupt/mcal_external_interrupt.h" 1
+# 12 "./MCAL_Layer/Interrupt/mcal_external_interrupt.h" 2
 # 82 "./MCAL_Layer/Interrupt/mcal_external_interrupt.h"
 typedef void (*InterruptHandler)(void);
 
@@ -4989,13 +4915,16 @@ Std_ReturnType Interrupt_RBx_Init(const interrupt_RBx_t *int_obj);
 
 
 Std_ReturnType Interrupt_RBx_DeInit(const interrupt_RBx_t *int_obj);
-# 15 "./application.h" 2
+# 13 "./application.h" 2
 
 # 1 "./MCAL_Layer/EEPROM/hal_eeprom.h" 1
+# 14 "./MCAL_Layer/EEPROM/hal_eeprom.h"
+# 1 "./MCAL_Layer/EEPROM/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
+# 14 "./MCAL_Layer/EEPROM/hal_eeprom.h" 2
 # 37 "./MCAL_Layer/EEPROM/hal_eeprom.h"
 Std_ReturnType Data_EEPROM_WriteByte(uint16 bAdd, uint8 bData);
 Std_ReturnType Data_EEPROM_ReadByte(uint16 bAdd, uint8 *bData);
-# 16 "./application.h" 2
+# 14 "./application.h" 2
 
 # 1 "./MCAL_Layer/ADC/hal_adc.h" 1
 # 16 "./MCAL_Layer/ADC/hal_adc.h"
@@ -5076,10 +5005,10 @@ Std_ReturnType ADC_GetConversionResult(const adc_conf_t *_adc, adc_result_t *con
 Std_ReturnType ADC_GetConversion_Blocking(const adc_conf_t *_adc, adc_channel_select_t channel,
                                  adc_result_t *conversion_result);
 Std_ReturnType ADC_StartConversion_Interrupt(const adc_conf_t *_adc, adc_channel_select_t channel);
-# 17 "./application.h" 2
+# 15 "./application.h" 2
 
 # 1 "./MCAL_Layer/CCP/ccp_cfg.h" 1
-# 18 "./application.h" 2
+# 16 "./application.h" 2
 
 # 1 "./MCAL_Layer/CCP/hal_ccp.h" 1
 # 74 "./MCAL_Layer/CCP/hal_ccp.h"
@@ -5146,7 +5075,7 @@ Std_ReturnType CCP_DeInit(const ccp_t *_ccp_obj);
 Std_ReturnType CCP_PWM_Set_Duty(const ccp_t *_ccp_obj, const uint8 _duty);
 Std_ReturnType CCP_PWM_Start(const ccp_t *_ccp_obj);
 Std_ReturnType CCP_PWM_Stop(const ccp_t *_ccp_obj);
-# 19 "./application.h" 2
+# 17 "./application.h" 2
 
 # 1 "./MCAL_Layer/Timer0/hal_timr0.h" 1
 # 44 "./MCAL_Layer/Timer0/hal_timr0.h"
@@ -5180,7 +5109,7 @@ Std_ReturnType Timer0_Init(const timer0_t *_timer);
 Std_ReturnType Timer0_DeInit(const timer0_t *_timer);
 Std_ReturnType Timer0_Write_Value(const timer0_t *_timer, uint16 _value);
 Std_ReturnType Timer0_Read_Value(const timer0_t *_timer, uint16 *_value);
-# 20 "./application.h" 2
+# 18 "./application.h" 2
 
 # 1 "./MCAL_Layer/Timer1/hal_timr1.h" 1
 # 60 "./MCAL_Layer/Timer1/hal_timr1.h"
@@ -5203,7 +5132,7 @@ Std_ReturnType Timer1_Init(const timer1_t *_timer);
 Std_ReturnType Timer1_DeInit(const timer1_t *_timer);
 Std_ReturnType Timer1_Write_Value(const timer1_t *_timer, uint16 _value);
 Std_ReturnType Timer1_Read_Value(const timer1_t *_timer, uint16 *_value);
-# 21 "./application.h" 2
+# 19 "./application.h" 2
 
 # 1 "./MCAL_Layer/Timer2/hal_timr2.h" 1
 # 53 "./MCAL_Layer/Timer2/hal_timr2.h"
@@ -5222,7 +5151,7 @@ Std_ReturnType Timer2_Init(const timer2_t *_timer);
 Std_ReturnType Timer2_DeInit(const timer2_t *_timer);
 Std_ReturnType Timer2_Write_Value(const timer2_t *_timer, uint8 _value);
 Std_ReturnType Timer2_Read_Value(const timer2_t *_timer, uint8 *_value);
-# 22 "./application.h" 2
+# 20 "./application.h" 2
 
 # 1 "./MCAL_Layer/Timer3/hal_timr3.h" 1
 # 50 "./MCAL_Layer/Timer3/hal_timr3.h"
@@ -5244,147 +5173,60 @@ Std_ReturnType Timer3_Init(const timer3_t *_timer);
 Std_ReturnType Timer3_DeInit(const timer3_t *_timer);
 Std_ReturnType Timer3_Write_Value(const timer3_t *_timer, uint16 _value);
 Std_ReturnType Timer3_Read_Value(const timer3_t *_timer, uint16 *_value);
-# 23 "./application.h" 2
-# 32 "./application.h"
+# 21 "./application.h" 2
+# 30 "./application.h"
 void application_intialize(void);
-# 9 "application.c" 2
-
-void SegmentsUpdate();
-void TimesUpdate();
-void usartTxHandeler();
-
-Std_ReturnType ret = (Std_ReturnType)0x00;
+# 8 "application.c" 2
 
 
 
+timer3_t timer3_obj;
+ccp_t ccp_obj;
 
-uint8 hour=20, min=45, sec=50;
-uint8 counter;
-uint8 keypad_val, keypad_pressed=0;
+volatile uint8 CCP1_Second_Copture_Flag = 0;
+uint16 Second_Copture = 0;
+volatile uint32 Timer3_OverFlow = 0;
+uint32 Total_Period_MicroSecond = 0;
+uint32 Freq = 0;
 
-segment_t seg =
-{
-    .segment_pins[0].port = PORTB_INDEX,
-    .segment_pins[0].pin = GPIO_PIN0,
-    .segment_pins[0].logic = GPIO_LOW,
-    .segment_pins[0].direction = GPIO_DIRECTION_OUTPUT,
+void CCP1_DefaultInterruptHandler(void){
 
-    .segment_pins[1].port = PORTB_INDEX,
-    .segment_pins[1].pin = GPIO_PIN1,
-    .segment_pins[1].logic = GPIO_LOW,
-    .segment_pins[1].direction = GPIO_DIRECTION_OUTPUT,
+}
 
-    .segment_pins[2].port = PORTB_INDEX,
-    .segment_pins[2].pin = GPIO_PIN2,
-    .segment_pins[2].logic = GPIO_LOW,
-    .segment_pins[2].direction = GPIO_DIRECTION_OUTPUT,
+void Timer3_DefaultInterruptHandler(void){
+    Timer3_OverFlow++;
+}
 
-    .segment_pins[3].port = PORTB_INDEX,
-    .segment_pins[3].pin = GPIO_PIN3,
-    .segment_pins[3].logic = GPIO_LOW,
-    .segment_pins[3].direction = GPIO_DIRECTION_OUTPUT,
-};
+int main() {
+    Std_ReturnType ret = (Std_ReturnType)0x00;
 
-
-
-usart_t usart_1 =
-{
-    .baudrate = 9600,
-    .baudrate_gen_gonfig = BAUDRATE_ASYN_8BIT_lOW_SPEED,
-
-    .usart_tx_cfg.usart_tx_enable = 1,
-    .usart_tx_cfg.usart_tx_interrupt_enable = 1,
-    .usart_tx_cfg.usart_tx_9bit_enable = 0,
-
-    .usart_rx_cfg.usart_rx_enable = 1,
-    .usart_rx_cfg.usart_rx_interrupt_enable = 1,
-    .usart_rx_cfg.usart_rx_9bit_enable = 0,
-
-    .EUSART_RxDefaultInterruptHandler = ((void*)0),
-    .EUSART_FramingErrorHandler = ((void*)0),
-    .EUSART_OverrunErrorHandler = ((void*)0),
-    .EUSART_TxDefaultInterruptHandler = usartTxHandeler
-};
-
-
-
-int main()
-{
     application_intialize();
-    while(1)
-    {
-        SegmentsUpdate();
-        TimesUpdate();
+
+    ccp_obj.CCP1_InterruptHandler = CCP1_DefaultInterruptHandler;
+    ccp_obj.ccp_inst = CCP1_INST;
+    ccp_obj.ccp_mode = CCP_CAPTURE_MODE_SELECTED;
+    ccp_obj.ccp_mode_variant = ((uint8)0x05);
+    ccp_obj.ccp_capture_timer = CCP1_CCP2_TIMER3;
+    ccp_obj.ccp_pin.port = PORTC_INDEX;
+    ccp_obj.ccp_pin.pin = GPIO_PIN2;
+    ccp_obj.ccp_pin.direction = GPIO_DIRECTION_INPUT;
+    ret = CCP_Init(&ccp_obj);
+
+    timer3_obj.TMR3_InterruptHandler = Timer3_DefaultInterruptHandler;
+    timer3_obj.timer3_mode = 0;
+    timer3_obj.priority = INTERRUPT_LOW_PRIORITY;
+    timer3_obj.timer3_prescaler_value = 0;
+    timer3_obj.timer3_preload_value = 0;
+    timer3_obj.timer3_reg_wr_mode = 0;
+    ret = Timer3_Init(&timer3_obj);
+
+    while(1){
+
     }
     return (0);
 }
 
-void application_intialize(void)
-{
-    ret = gpio_port_direction_intialize(PORTD_INDEX, 0xC0);
-    ret = seven_segement_intialize(&seg);
-    ret = EUSART_ASYNC_Init(&usart_1);
-}
-
-
-
-void usartTxHandeler()
-{
-    uint8 timeRxArray[4];
-    USART_Read_string(&timeRxArray , 4);
-    hour = timeRxArray[0] - '0';
-    min = timeRxArray[1] - '0';
-    sec = timeRxArray[2] - '0';
-}
-
-
-
-void TimesUpdate()
-{
-    sec++;
-    if(sec==60)
-    {
-        min++;
-        sec=0;
-    }
-    if(min==60)
-    {
-        hour++;
-        min=0;
-    }
-    if(hour==24)
-    {
-        hour=0;
-    }
-}
-
-
-void SegmentsUpdate()
-{
-    for(counter=0 ; counter<34 ; counter++)
-    {
-        ret = gpio_port_write_logic(PORTD_INDEX, 1);
-        ret = seven_segement_write_number(&seg, (uint8)(hour/10) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-
-        ret = gpio_port_write_logic(PORTD_INDEX, 2);
-        ret = seven_segement_write_number(&seg, (uint8)(hour%10 ) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-
-        ret = gpio_port_write_logic(PORTD_INDEX, 4);
-        ret = seven_segement_write_number(&seg, (uint8)(min/10) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-
-        ret = gpio_port_write_logic(PORTD_INDEX, 8);
-        ret = seven_segement_write_number(&seg, (uint8)(min%10) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-
-        ret = gpio_port_write_logic(PORTD_INDEX, 16);
-        ret = seven_segement_write_number(&seg, (uint8)(sec/10) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-
-        ret = gpio_port_write_logic(PORTD_INDEX, 32);
-        ret = seven_segement_write_number(&seg, (uint8)(sec%10) );
-        _delay((unsigned long)((5)*(8000000UL/4000.0)));
-    }
+void application_intialize(void){
+    Std_ReturnType ret = (Std_ReturnType)0x00;
+    ecu_layer_intialize();
 }

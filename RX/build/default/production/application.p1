@@ -1,92 +1,57 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[v F3383 `(v ~T0 @X0 0 tf ]
+"11 application.c
+[; ;application.c: 11: timer3_t timer3_obj;
+[c E3146 0 1 .. ]
+[n E3146 . INTERRUPT_LOW_PRIORITY INTERRUPT_HIGH_PRIORITY  ]
+"50 ./MCAL_Layer/Timer3/hal_timr3.h
+[; ;./MCAL_Layer/Timer3/hal_timr3.h: 50: typedef struct{
+[s S292 `*F3383 1 `E3146 1 `us 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S292 . TMR3_InterruptHandler priority timer3_preload_value timer3_prescaler_value timer3_mode timer3_counter_mode timer3_reg_wr_mode timer1_reserved ]
+"12 application.c
+[; ;application.c: 12: ccp_t ccp_obj;
+[c E3273 0 1 .. ]
+[n E3273 . CCP1_INST CCP2_INST  ]
+[c E3259 0 1 2 .. ]
+[n E3259 . CCP_CAPTURE_MODE_SELECTED CCP_COMPARE_MODE_SELECTED CCP_PWM_MODE_SELECTED  ]
 "66 ./MCAL_Layer/Timer3/../../MCAL_Layer/GPIO/hal_gpio.h
 [s S273 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S273 . port pin direction logic ]
-"23 application.c
-[; ;application.c: 23: segment_t seg =
-[c E3010 0 1 .. ]
-[n E3010 . SEGMENT_COMMON_ANODE SEGMENT_COMMON_CATHODE  ]
-"29 ./ECU_Layer/7_Segment/ecu_seven_segment.h
-[; ;./ECU_Layer/7_Segment/ecu_seven_segment.h: 29: typedef struct{
-[s S275 `S273 -> 4 `i `E3010 1 ]
-[n S275 . segment_pins segment_type ]
-"23 application.c
-[; ;application.c: 23: segment_t seg =
+"12 application.c
+[; ;application.c: 12: ccp_t ccp_obj;
+[c E3277 0 1 2 .. ]
+[n E3277 . CCP1_CCP2_TIMER3 CCP1_TIMER1_CCP2_TIMER3 CCP1_CCP2_TIMER1  ]
+[v F3292 `(v ~T0 @X0 0 tf ]
+[v F3295 `(v ~T0 @X0 0 tf ]
+"109 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 109: typedef struct{
+[s S288 `E3273 1 `E3259 1 `uc 1 `S273 1 `E3277 1 `ul 1 `uc 1 `uc 1 `*F3292 1 `E3146 1 `*F3295 1 `E3146 1 ]
+[n S288 . ccp_inst ccp_mode ccp_mode_variant ccp_pin ccp_capture_timer PWM_Frequency timer2_postscaler_value timer2_prescaler_value CCP1_InterruptHandler CCP1_priority CCP2_InterruptHandler CCP2_priority ]
+[p mainexit ]
+"30 ./application.h
+[; ;./application.h: 30: void application_intialize(void);
+[v _application_intialize `(v ~T0 @X0 0 ef ]
+"38 application.c
+[; ;application.c: 38:     ccp_obj.ccp_pin.port = PORTC_INDEX;
 [c E2951 0 1 2 3 4 .. ]
 [n E2951 . PORTA_INDEX PORTB_INDEX PORTC_INDEX PORTD_INDEX PORTE_INDEX  ]
+"39
+[; ;application.c: 39:     ccp_obj.ccp_pin.pin = GPIO_PIN2;
 [c E2941 0 1 2 3 4 5 6 7 .. ]
 [n E2941 . GPIO_PIN0 GPIO_PIN1 GPIO_PIN2 GPIO_PIN3 GPIO_PIN4 GPIO_PIN5 GPIO_PIN6 GPIO_PIN7  ]
+"40
+[; ;application.c: 40:     ccp_obj.ccp_pin.direction = GPIO_DIRECTION_INPUT;
 [c E2937 0 1 .. ]
 [n E2937 . GPIO_DIRECTION_OUTPUT GPIO_DIRECTION_INPUT  ]
-[c E2933 0 1 .. ]
-[n E2933 . GPIO_LOW GPIO_HIGH  ]
-"48
-[; ;application.c: 48: usart_t usart_1 =
-[c E3150 0 1 2 3 4 5 .. ]
-[n E3150 . BAUDRATE_ASYN_8BIT_lOW_SPEED BAUDRATE_ASYN_8BIT_HIGH_SPEED BAUDRATE_ASYN_16BIT_lOW_SPEED BAUDRATE_ASYN_16BIT_HIGH_SPEED BAUDRATE_SYN_8BIT BAUDRATE_SYN_16BIT  ]
-[c E3146 0 1 .. ]
-[n E3146 . INTERRUPT_LOW_PRIORITY INTERRUPT_HIGH_PRIORITY  ]
-"70 ./MCAL_Layer/usart/hal_usart.h
-[; ;./MCAL_Layer/usart/hal_usart.h: 70: typedef struct{
-[s S282 `E3146 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
-[n S282 . usart_tx_int_priority usart_tx_enable usart_tx_interrupt_enable usart_tx_9bit_enable usart_tx_reserved ]
-"78
-[; ;./MCAL_Layer/usart/hal_usart.h: 78: typedef struct{
-[s S283 `E3146 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
-[n S283 . usart_rx_int_priority usart_rx_enable usart_rx_interrupt_enable usart_rx_9bit_enable usart_rx_reserved ]
-"87
-[; ;./MCAL_Layer/usart/hal_usart.h: 87:  struct{
-[s S285 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S285 . usart_tx_reserved usart_ferr usart_oerr ]
-"86
-[; ;./MCAL_Layer/usart/hal_usart.h: 86: typedef union{
-[u S284 `S285 1 `uc 1 ]
-[n S284 . . status ]
-[v F3187 `(v ~T0 @X0 0 tf ]
-[v F3189 `(v ~T0 @X0 0 tf ]
-[v F3191 `(v ~T0 @X0 0 tf ]
-[v F3193 `(v ~T0 @X0 0 tf ]
-"95
-[; ;./MCAL_Layer/usart/hal_usart.h: 95: typedef struct{
-[s S286 `ul 1 `E3150 1 `S282 1 `S283 1 `S284 1 `*F3187 1 `*F3189 1 `*F3191 1 `*F3193 1 ]
-[n S286 . baudrate baudrate_gen_gonfig usart_tx_cfg usart_rx_cfg error_status EUSART_TxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler EUSART_FramingErrorHandler EUSART_OverrunErrorHandler ]
-"12 application.c
-[; ;application.c: 12: void usartTxHandeler();
-[v _usartTxHandeler `(v ~T0 @X0 0 e? ]
-[v F3482 `(v ~T0 @X0 0 tf ]
-[v F3484 `(v ~T0 @X0 0 tf ]
-[v F3485 `(v ~T0 @X0 0 tf ]
-[v F3486 `(v ~T0 @X0 0 tf ]
-[p mainexit ]
-"32 ./application.h
-[; ;./application.h: 32: void application_intialize(void);
-[v _application_intialize `(v ~T0 @X0 0 ef ]
-"10 application.c
-[; ;application.c: 10: void SegmentsUpdate();
-[v _SegmentsUpdate `(v ~T0 @X0 0 e? ]
-"11
-[; ;application.c: 11: void TimesUpdate();
-[v _TimesUpdate `(v ~T0 @X0 0 e? ]
-"81 ./MCAL_Layer/Timer3/../../MCAL_Layer/GPIO/hal_gpio.h
-[v _gpio_port_direction_intialize `(uc ~T0 @X0 0 ef2`E2951`uc ]
-"35 ./ECU_Layer/7_Segment/ecu_seven_segment.h
-[; ;./ECU_Layer/7_Segment/ecu_seven_segment.h: 35: Std_ReturnType seven_segement_intialize(const segment_t *seg);
-[v _seven_segement_intialize `(uc ~T0 @X0 0 ef1`*CS275 ]
-"108 ./MCAL_Layer/usart/hal_usart.h
-[; ;./MCAL_Layer/usart/hal_usart.h: 108: Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart);
-[v _EUSART_ASYNC_Init `(uc ~T0 @X0 0 ef1`*CS286 ]
-"122
-[; ;./MCAL_Layer/usart/hal_usart.h: 122: void USART_Read_string(char *buffer, unsigned char len);
-[v _USART_Read_string `(v ~T0 @X0 0 ef2`*uc`uc ]
-"83 ./MCAL_Layer/Timer3/../../MCAL_Layer/GPIO/hal_gpio.h
-[v _gpio_port_write_logic `(uc ~T0 @X0 0 ef2`E2951`uc ]
-"36 ./ECU_Layer/7_Segment/ecu_seven_segment.h
-[; ;./ECU_Layer/7_Segment/ecu_seven_segment.h: 36: Std_ReturnType seven_segement_write_number(const segment_t *seg, uint8 number);
-[v _seven_segement_write_number `(uc ~T0 @X0 0 ef2`*CS275`uc ]
-[v F2918 `(v ~T0 @X0 1 tf1`ul ]
-"203 C:/Users/mohmm/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\pic18.h
-[v __delay `JF2918 ~T0 @X0 0 e ]
-[p i __delay ]
+"131 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 131: Std_ReturnType CCP_Init(const ccp_t *_ccp_obj);
+[v _CCP_Init `(uc ~T0 @X0 0 ef1`*CS288 ]
+"64 ./MCAL_Layer/Timer3/hal_timr3.h
+[; ;./MCAL_Layer/Timer3/hal_timr3.h: 64: Std_ReturnType Timer3_Init(const timer3_t *_timer);
+[v _Timer3_Init `(uc ~T0 @X0 0 ef1`*CS292 ]
+"19 ./ECU_Layer/ecu_layer_init.h
+[; ;./ECU_Layer/ecu_layer_init.h: 19: void ecu_layer_intialize(void);
+[v _ecu_layer_intialize `(v ~T0 @X0 0 ef ]
 "54 C:/Users/mohmm/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Users/mohmm/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -498,339 +463,159 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Users/mohmm/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"14 application.c
-[; ;application.c: 14: Std_ReturnType ret = (Std_ReturnType)0x00;
-[v _ret `uc ~T0 @X0 1 e ]
-[i _ret
+"11 application.c
+[; ;application.c: 11: timer3_t timer3_obj;
+[v _timer3_obj `S292 ~T0 @X0 1 e ]
+"12
+[; ;application.c: 12: ccp_t ccp_obj;
+[v _ccp_obj `S288 ~T0 @X0 1 e ]
+"14
+[; ;application.c: 14: volatile uint8 CCP1_Second_Copture_Flag = 0;
+[v _CCP1_Second_Copture_Flag `Vuc ~T0 @X0 1 e ]
+[i _CCP1_Second_Copture_Flag
 -> -> 0 `i `uc
 ]
-"19
-[; ;application.c: 19: uint8 hour=20, min=45, sec=50;
-[v _hour `uc ~T0 @X0 1 e ]
-[i _hour
--> -> 20 `i `uc
+"15
+[; ;application.c: 15: uint16 Second_Copture = 0;
+[v _Second_Copture `us ~T0 @X0 1 e ]
+[i _Second_Copture
+-> -> 0 `i `us
 ]
-[v _min `uc ~T0 @X0 1 e ]
-[i _min
--> -> 45 `i `uc
+"16
+[; ;application.c: 16: volatile uint32 Timer3_OverFlow = 0;
+[v _Timer3_OverFlow `Vul ~T0 @X0 1 e ]
+[i _Timer3_OverFlow
+-> -> -> 0 `i `l `ul
 ]
-[v _sec `uc ~T0 @X0 1 e ]
-[i _sec
--> -> 50 `i `uc
+"17
+[; ;application.c: 17: uint32 Total_Period_MicroSecond = 0;
+[v _Total_Period_MicroSecond `ul ~T0 @X0 1 e ]
+[i _Total_Period_MicroSecond
+-> -> -> 0 `i `l `ul
+]
+"18
+[; ;application.c: 18: uint32 Freq = 0;
+[v _Freq `ul ~T0 @X0 1 e ]
+[i _Freq
+-> -> -> 0 `i `l `ul
 ]
 "20
-[; ;application.c: 20: uint8 counter;
-[v _counter `uc ~T0 @X0 1 e ]
-"21
-[; ;application.c: 21: uint8 keypad_val, keypad_pressed=0;
-[v _keypad_val `uc ~T0 @X0 1 e ]
-[v _keypad_pressed `uc ~T0 @X0 1 e ]
-[i _keypad_pressed
--> -> 0 `i `uc
-]
-"23
-[; ;application.c: 23: segment_t seg =
-[v _seg `S275 ~T0 @X0 1 e ]
-[i _seg
-:U ..
-:U ..
-:U ..
-:U ..
--> . `E2951 1 `uc
--> . `E2941 0 `uc
--> . `E2937 0 `uc
--> . `E2933 0 `uc
-..
-:U ..
--> . `E2951 1 `uc
--> . `E2941 1 `uc
--> . `E2937 0 `uc
--> . `E2933 0 `uc
-..
-:U ..
--> . `E2951 1 `uc
--> . `E2941 2 `uc
--> . `E2937 0 `uc
--> . `E2933 0 `uc
-..
-:U ..
--> . `E2951 1 `uc
--> . `E2941 3 `uc
--> . `E2937 0 `uc
--> . `E2933 0 `uc
-..
-..
-..
-..
-]
-"48
-[; ;application.c: 48: usart_t usart_1 =
-[v _usart_1 `S286 ~T0 @X0 1 e ]
-[i _usart_1
-:U ..
-:U ..
--> -> -> 9600 `i `l `ul
-. `E3150 0
-:U ..
-:U ..
--> -> 0 `i `E3146
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
-..
-..
-:U ..
-:U ..
--> -> 0 `i `E3146
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
-..
-..
-:U ..
-:U ..
-:U ..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-..
-..
-..
--> &U _usartTxHandeler `*F3482
--> -> -> 0 `i `*v `*F3484
--> -> -> 0 `i `*v `*F3485
--> -> -> 0 `i `*v `*F3486
-..
-..
-]
+[; ;application.c: 20: void CCP1_DefaultInterruptHandler(void){
+[v _CCP1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _CCP1_DefaultInterruptHandler ]
+[f ]
+"22
+[; ;application.c: 22: }
+[e :UE 293 ]
+}
+"24
+[; ;application.c: 24: void Timer3_DefaultInterruptHandler(void){
+[v _Timer3_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _Timer3_DefaultInterruptHandler ]
+[f ]
+"25
+[; ;application.c: 25:     Timer3_OverFlow++;
+[e ++ _Timer3_OverFlow -> -> 1 `i `Vul ]
+"26
+[; ;application.c: 26: }
+[e :UE 294 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"69
-[; ;application.c: 69: int main()
+"28
+[; ;application.c: 28: int main() {
 [v _main `(i ~T0 @X0 1 ef ]
-"70
-[; ;application.c: 70: {
 {
 [e :U _main ]
 [f ]
-"71
-[; ;application.c: 71:     application_intialize();
+"29
+[; ;application.c: 29:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"31
+[; ;application.c: 31:     application_intialize();
 [e ( _application_intialize ..  ]
-"72
-[; ;application.c: 72:     while(1)
-[e :U 300 ]
-"73
-[; ;application.c: 73:     {
+"33
+[; ;application.c: 33:     ccp_obj.CCP1_InterruptHandler = CCP1_DefaultInterruptHandler;
+[e = . _ccp_obj 8 &U _CCP1_DefaultInterruptHandler ]
+"34
+[; ;application.c: 34:     ccp_obj.ccp_inst = CCP1_INST;
+[e = . _ccp_obj 0 . `E3273 0 ]
+"35
+[; ;application.c: 35:     ccp_obj.ccp_mode = CCP_CAPTURE_MODE_SELECTED;
+[e = . _ccp_obj 1 . `E3259 0 ]
+"36
+[; ;application.c: 36:     ccp_obj.ccp_mode_variant = ((uint8)0x05);
+[e = . _ccp_obj 2 -> -> 5 `i `uc ]
+"37
+[; ;application.c: 37:     ccp_obj.ccp_capture_timer = CCP1_CCP2_TIMER3;
+[e = . _ccp_obj 4 . `E3277 0 ]
+"38
+[; ;application.c: 38:     ccp_obj.ccp_pin.port = PORTC_INDEX;
+[e = . . _ccp_obj 3 0 -> . `E2951 2 `uc ]
+"39
+[; ;application.c: 39:     ccp_obj.ccp_pin.pin = GPIO_PIN2;
+[e = . . _ccp_obj 3 1 -> . `E2941 2 `uc ]
+"40
+[; ;application.c: 40:     ccp_obj.ccp_pin.direction = GPIO_DIRECTION_INPUT;
+[e = . . _ccp_obj 3 2 -> . `E2937 1 `uc ]
+"41
+[; ;application.c: 41:     ret = CCP_Init(&ccp_obj);
+[e = _ret ( _CCP_Init (1 -> &U _ccp_obj `*CS288 ]
+"43
+[; ;application.c: 43:     timer3_obj.TMR3_InterruptHandler = Timer3_DefaultInterruptHandler;
+[e = . _timer3_obj 0 &U _Timer3_DefaultInterruptHandler ]
+"44
+[; ;application.c: 44:     timer3_obj.timer3_mode = 0;
+[e = . _timer3_obj 4 -> -> 0 `i `uc ]
+"45
+[; ;application.c: 45:     timer3_obj.priority = INTERRUPT_LOW_PRIORITY;
+[e = . _timer3_obj 1 . `E3146 0 ]
+"46
+[; ;application.c: 46:     timer3_obj.timer3_prescaler_value = 0;
+[e = . _timer3_obj 3 -> -> 0 `i `uc ]
+"47
+[; ;application.c: 47:     timer3_obj.timer3_preload_value = 0;
+[e = . _timer3_obj 2 -> -> 0 `i `us ]
+"48
+[; ;application.c: 48:     timer3_obj.timer3_reg_wr_mode = 0;
+[e = . _timer3_obj 6 -> -> 0 `i `uc ]
+"49
+[; ;application.c: 49:     ret = Timer3_Init(&timer3_obj);
+[e = _ret ( _Timer3_Init (1 -> &U _timer3_obj `*CS292 ]
+"51
+[; ;application.c: 51:     while(1){
+[e :U 297 ]
 {
-"74
-[; ;application.c: 74:         SegmentsUpdate();
-[e ( _SegmentsUpdate ..  ]
-"75
-[; ;application.c: 75:         TimesUpdate();
-[e ( _TimesUpdate ..  ]
-"76
-[; ;application.c: 76:     }
+"53
+[; ;application.c: 53:     }
 }
-[e :U 299 ]
-[e $U 300  ]
-[e :U 301 ]
-"77
-[; ;application.c: 77:     return (0);
+[e :U 296 ]
+[e $U 297  ]
+[e :U 298 ]
+"54
+[; ;application.c: 54:     return (0);
 [e ) -> 0 `i ]
-[e $UE 298  ]
-"78
-[; ;application.c: 78: }
-[e :UE 298 ]
+[e $UE 295  ]
+"55
+[; ;application.c: 55: }
+[e :UE 295 ]
 }
-"80
-[; ;application.c: 80: void application_intialize(void)
+"57
+[; ;application.c: 57: void application_intialize(void){
 [v _application_intialize `(v ~T0 @X0 1 ef ]
-"81
-[; ;application.c: 81: {
 {
 [e :U _application_intialize ]
 [f ]
-"82
-[; ;application.c: 82:     ret = gpio_port_direction_intialize(PORTD_INDEX, 0xC0);
-[e = _ret ( _gpio_port_direction_intialize (2 , . `E2951 3 -> -> 192 `i `uc ]
-"83
-[; ;application.c: 83:     ret = seven_segement_intialize(&seg);
-[e = _ret ( _seven_segement_intialize (1 -> &U _seg `*CS275 ]
-"84
-[; ;application.c: 84:     ret = EUSART_ASYNC_Init(&usart_1);
-[e = _ret ( _EUSART_ASYNC_Init (1 -> &U _usart_1 `*CS286 ]
-"85
-[; ;application.c: 85: }
-[e :UE 302 ]
-}
-"89
-[; ;application.c: 89: void usartTxHandeler()
-[v _usartTxHandeler `(v ~T0 @X0 1 ef ]
-"90
-[; ;application.c: 90: {
-{
-[e :U _usartTxHandeler ]
-[f ]
-"91
-[; ;application.c: 91:     uint8 timeRxArray[4];
-[v _timeRxArray `uc ~T0 @X0 -> 4 `i a ]
-"92
-[; ;application.c: 92:     USART_Read_string(&timeRxArray , 4);
-[e ( _USART_Read_string (2 , -> &U _timeRxArray `*uc -> -> 4 `i `uc ]
-"93
-[; ;application.c: 93:     hour = timeRxArray[0] - '0';
-[e = _hour -> - -> *U + &U _timeRxArray * -> -> -> 0 `i `ui `ux -> -> # *U &U _timeRxArray `ui `ux `ui -> 48 `ui `uc ]
-"94
-[; ;application.c: 94:     min = timeRxArray[1] - '0';
-[e = _min -> - -> *U + &U _timeRxArray * -> -> -> 1 `i `ui `ux -> -> # *U &U _timeRxArray `ui `ux `ui -> 48 `ui `uc ]
-"95
-[; ;application.c: 95:     sec = timeRxArray[2] - '0';
-[e = _sec -> - -> *U + &U _timeRxArray * -> -> -> 2 `i `ui `ux -> -> # *U &U _timeRxArray `ui `ux `ui -> 48 `ui `uc ]
-"96
-[; ;application.c: 96: }
-[e :UE 303 ]
-}
-"100
-[; ;application.c: 100: void TimesUpdate()
-[v _TimesUpdate `(v ~T0 @X0 1 ef ]
-"101
-[; ;application.c: 101: {
-{
-[e :U _TimesUpdate ]
-[f ]
-"102
-[; ;application.c: 102:     sec++;
-[e ++ _sec -> -> 1 `i `uc ]
-"103
-[; ;application.c: 103:     if(sec==60)
-[e $ ! == -> _sec `i -> 60 `i 305  ]
-"104
-[; ;application.c: 104:     {
-{
-"105
-[; ;application.c: 105:         min++;
-[e ++ _min -> -> 1 `i `uc ]
-"106
-[; ;application.c: 106:         sec=0;
-[e = _sec -> -> 0 `i `uc ]
-"107
-[; ;application.c: 107:     }
-}
-[e :U 305 ]
-"108
-[; ;application.c: 108:     if(min==60)
-[e $ ! == -> _min `i -> 60 `i 306  ]
-"109
-[; ;application.c: 109:     {
-{
-"110
-[; ;application.c: 110:         hour++;
-[e ++ _hour -> -> 1 `i `uc ]
-"111
-[; ;application.c: 111:         min=0;
-[e = _min -> -> 0 `i `uc ]
-"112
-[; ;application.c: 112:     }
-}
-[e :U 306 ]
-"113
-[; ;application.c: 113:     if(hour==24)
-[e $ ! == -> _hour `i -> 24 `i 307  ]
-"114
-[; ;application.c: 114:     {
-{
-"115
-[; ;application.c: 115:         hour=0;
-[e = _hour -> -> 0 `i `uc ]
-"116
-[; ;application.c: 116:     }
-}
-[e :U 307 ]
-"117
-[; ;application.c: 117: }
-[e :UE 304 ]
-}
-"120
-[; ;application.c: 120: void SegmentsUpdate()
-[v _SegmentsUpdate `(v ~T0 @X0 1 ef ]
-"121
-[; ;application.c: 121: {
-{
-[e :U _SegmentsUpdate ]
-[f ]
-"122
-[; ;application.c: 122:     for(counter=0 ; counter<34 ; counter++)
-{
-[e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 34 `i 309  ]
-[e $U 310  ]
-[e :U 309 ]
-"123
-[; ;application.c: 123:     {
-{
-"124
-[; ;application.c: 124:         ret = gpio_port_write_logic(PORTD_INDEX, 1);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 1 `i `uc ]
-"125
-[; ;application.c: 125:         ret = seven_segement_write_number(&seg, (uint8)(hour/10) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> / -> _hour `i -> 10 `i `uc ]
-"126
-[; ;application.c: 126:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"128
-[; ;application.c: 128:         ret = gpio_port_write_logic(PORTD_INDEX, 2);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 2 `i `uc ]
-"129
-[; ;application.c: 129:         ret = seven_segement_write_number(&seg, (uint8)(hour%10 ) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> % -> _hour `i -> 10 `i `uc ]
-"130
-[; ;application.c: 130:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"132
-[; ;application.c: 132:         ret = gpio_port_write_logic(PORTD_INDEX, 4);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 4 `i `uc ]
-"133
-[; ;application.c: 133:         ret = seven_segement_write_number(&seg, (uint8)(min/10) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> / -> _min `i -> 10 `i `uc ]
-"134
-[; ;application.c: 134:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"136
-[; ;application.c: 136:         ret = gpio_port_write_logic(PORTD_INDEX, 8);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 8 `i `uc ]
-"137
-[; ;application.c: 137:         ret = seven_segement_write_number(&seg, (uint8)(min%10) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> % -> _min `i -> 10 `i `uc ]
-"138
-[; ;application.c: 138:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"140
-[; ;application.c: 140:         ret = gpio_port_write_logic(PORTD_INDEX, 16);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 16 `i `uc ]
-"141
-[; ;application.c: 141:         ret = seven_segement_write_number(&seg, (uint8)(sec/10) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> / -> _sec `i -> 10 `i `uc ]
-"142
-[; ;application.c: 142:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"144
-[; ;application.c: 144:         ret = gpio_port_write_logic(PORTD_INDEX, 32);
-[e = _ret ( _gpio_port_write_logic (2 , . `E2951 3 -> -> 32 `i `uc ]
-"145
-[; ;application.c: 145:         ret = seven_segement_write_number(&seg, (uint8)(sec%10) );
-[e = _ret ( _seven_segement_write_number (2 , -> &U _seg `*CS275 -> % -> _sec `i -> 10 `i `uc ]
-"146
-[; ;application.c: 146:         _delay((unsigned long)((5)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"147
-[; ;application.c: 147:     }
-}
-[e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 34 `i 309  ]
-[e :U 310 ]
-}
-"148
-[; ;application.c: 148: }
-[e :UE 308 ]
+"58
+[; ;application.c: 58:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"59
+[; ;application.c: 59:     ecu_layer_intialize();
+[e ( _ecu_layer_intialize ..  ]
+"60
+[; ;application.c: 60: }
+[e :UE 299 ]
 }

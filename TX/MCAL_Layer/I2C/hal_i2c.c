@@ -1,9 +1,10 @@
 /* 
  * File:   hal_i2c.c
- * Author: Ahmed Abd El-Ghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on May 21, 2021, 9:53 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #include "hal_i2c.h"
 

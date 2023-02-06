@@ -1,9 +1,10 @@
 /* 
  * File:   hal_timr0.h
- * Author: Ahmed Abd El-Ghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on April 6, 2021, 8:53 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #ifndef HAL_TIMR0_H
 #define	HAL_TIMR0_H

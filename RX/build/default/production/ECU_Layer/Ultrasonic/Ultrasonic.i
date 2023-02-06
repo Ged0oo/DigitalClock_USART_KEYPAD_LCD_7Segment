@@ -4768,7 +4768,7 @@ Std_ReturnType Ultrasonic_Calculate_Distance(const ultrasonic_t *_config, uint16
     else{
 
         ret = gpio_pin_write_logic(&(_config->Trigger_Pin), GPIO_HIGH);
-        _delay((unsigned long)((10)*(8000000UL/4000000.0)));
+        _delay((unsigned long)((10)*(4000000UL/4000000.0)));
         ret = gpio_pin_write_logic(&(_config->Trigger_Pin), GPIO_LOW);
 
 

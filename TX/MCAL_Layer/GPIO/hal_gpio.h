@@ -1,9 +1,10 @@
 /* 
  * File:   hal_gpio.h
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on November 28, 2020, 9:32 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #ifndef HAL_GPIO_H
 #define	HAL_GPIO_H

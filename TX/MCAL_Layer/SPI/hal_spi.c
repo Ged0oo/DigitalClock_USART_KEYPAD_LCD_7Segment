@@ -1,7 +1,10 @@
 /* 
  * File:   hal_spi.c
- * Author: Ahmed Abd El-Ghafar
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #include "hal_spi.h"
 

@@ -12,16 +12,16 @@
   0h - 3h		(dist/default/production\Record_203.production.hex)
   8h - 11h		(dist/default/production\Record_203.production.hex)
   1000h - 1014h		(dist/default/production\Record_203.production.hex)
-  1016h - 2EA8h		(dist/default/production\Record_203.production.hex)
-  2EAAh - 3005h		(dist/default/production\Record_203.production.hex)
+  1016h - 2FE4h		(dist/default/production\Record_203.production.hex)
+  2FE6h - 301Bh		(dist/default/production\Record_203.production.hex)
   200000h - 200007h		(dist/default/production\Record_203.production.hex)
   300000h - 30000Dh		(dist/default/production\Record_203.production.hex)
  Unused ranges:
   4h - 7h
   12h - FFFh
   1015h - 1015h
-  2EA9h - 2EA9h
-  3006h - 1FFFFFh
+  2FE5h - 2FE5h
+  301Ch - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -524,7 +524,7 @@
 00002E70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002E80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002E90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002EA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1
+00002EA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002ED0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -544,9 +544,10 @@
 00002FB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002FE0 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003000 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00003000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

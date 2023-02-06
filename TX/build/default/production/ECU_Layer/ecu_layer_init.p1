@@ -420,7 +420,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ECU_Layer/ecu_layer_init.c: 11:     Std_ReturnType ret = (Std_ReturnType)0x00;
 [v _ret `uc ~T0 @X0 1 a ]
 [e = _ret -> -> 0 `i `uc ]
-"12
-[; ;ECU_Layer/ecu_layer_init.c: 12: }
+"13
+[; ;ECU_Layer/ecu_layer_init.c: 13: }
 [e :UE 282 ]
 }

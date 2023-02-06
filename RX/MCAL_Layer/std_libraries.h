@@ -1,8 +1,8 @@
-/* 
+ /* 
  * File:   std_libraries.h
- * Author: Ahmed.Elghafar
- *
- * Created on November 28, 2020, 9:43 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef STD_LIBRARIES_H

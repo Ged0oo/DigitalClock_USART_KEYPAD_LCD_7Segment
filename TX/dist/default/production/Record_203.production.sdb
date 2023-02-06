@@ -243,7 +243,27 @@ BAUDRATE_SYN_16BIT 5
 INTERRUPT_LOW_PRIORITY 0
 INTERRUPT_HIGH_PRIORITY 1
 ]
-"26 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+"11 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+[e E3146 . `uc
+INTERRUPT_LOW_PRIORITY 0
+INTERRUPT_HIGH_PRIORITY 1
+]
+"12
+[e E3273 . `uc
+CCP1_INST 0
+CCP2_INST 1
+]
+[e E3259 . `uc
+CCP_CAPTURE_MODE_SELECTED 0
+CCP_COMPARE_MODE_SELECTED 1
+CCP_PWM_MODE_SELECTED 2
+]
+[e E3277 . `uc
+CCP1_CCP2_TIMER3 0
+CCP1_TIMER1_CCP2_TIMER3 1
+CCP1_CCP2_TIMER1 2
+]
+"38
 [e E2951 . `uc
 PORTA_INDEX 0
 PORTB_INDEX 1
@@ -251,6 +271,7 @@ PORTC_INDEX 2
 PORTD_INDEX 3
 PORTE_INDEX 4
 ]
+"39
 [e E2941 . `uc
 GPIO_PIN0 0
 GPIO_PIN1 1
@@ -261,45 +282,19 @@ GPIO_PIN5 5
 GPIO_PIN6 6
 GPIO_PIN7 7
 ]
+"40
 [e E2937 . `uc
 GPIO_DIRECTION_OUTPUT 0
 GPIO_DIRECTION_INPUT 1
 ]
-[e E2933 . `uc
-GPIO_LOW 0
-GPIO_HIGH 1
-]
-"105
-[e E3150 . `uc
-BAUDRATE_ASYN_8BIT_lOW_SPEED 0
-BAUDRATE_ASYN_8BIT_HIGH_SPEED 1
-BAUDRATE_ASYN_16BIT_lOW_SPEED 2
-BAUDRATE_ASYN_16BIT_HIGH_SPEED 3
-BAUDRATE_SYN_8BIT 4
-BAUDRATE_SYN_16BIT 5
-]
-[e E3146 . `uc
-INTERRUPT_LOW_PRIORITY 0
-INTERRUPT_HIGH_PRIORITY 1
-]
-"126
+"20
+[v _CCP1_DefaultInterruptHandler CCP1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"24
+[v _Timer3_DefaultInterruptHandler Timer3_DefaultInterruptHandler `(v  1 e 1 0 ]
+"28
 [v _main main `(i  1 e 2 0 ]
-"166
-[v _calcTime calcTime `(v  1 e 1 0 ]
-"174
-[v _TimeValidation TimeValidation `(v  1 e 1 0 ]
-"194
-[v _getHoures getHoures `(v  1 e 1 0 ]
-"221
-[v _getMinutes getMinutes `(v  1 e 1 0 ]
-"248
-[v _getSeconds getSeconds `(v  1 e 1 0 ]
-"274
-[v _WelcomingMessage WelcomingMessage `(v  1 e 1 0 ]
-"281
+"57
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
-"289
-[v _usartSend usartSend `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
@@ -332,16 +327,12 @@ INTERRUPT_HIGH_PRIORITY 1
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"23 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/Chr_LCD/ecu_chr_lcd.c
-[v _lcd_4bit_intialize lcd_4bit_intialize `(uc  1 e 1 0 ]
-"60
+"60 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/Chr_LCD/ecu_chr_lcd.c
 [v _lcd_4bit_send_command lcd_4bit_send_command `(uc  1 e 1 0 ]
 "89
 [v _lcd_4bit_send_char_data lcd_4bit_send_char_data `(uc  1 e 1 0 ]
 "120
 [v _lcd_4bit_send_char_data_pos lcd_4bit_send_char_data_pos `(uc  1 e 1 0 ]
-"163
-[v _lcd_4bit_send_string_pos lcd_4bit_send_string_pos `(uc  1 e 1 0 ]
 "249
 [v _lcd_8bit_send_command lcd_8bit_send_command `(uc  1 e 1 0 ]
 "277
@@ -360,10 +351,8 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _lcd_8bit_set_cursor lcd_8bit_set_cursor `(uc  1 s 1 lcd_8bit_set_cursor ]
 "535
 [v _lcd_4bit_set_cursor lcd_4bit_set_cursor `(uc  1 s 1 lcd_4bit_set_cursor ]
-"24 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/KeyPad/ecu_keypad.c
-[v _keypad_initialize keypad_initialize `(uc  1 e 1 0 ]
-"49
-[v _keypad_get_value keypad_get_value `(uc  1 e 1 0 ]
+"10 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/ecu_layer_init.c
+[v _ecu_layer_intialize ecu_layer_intialize `(v  1 e 1 0 ]
 "108 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/ADC/hal_adc.c
 [v _ADC_SelectChannel ADC_SelectChannel `(uc  1 e 1 0 ]
 "131
@@ -378,7 +367,9 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _configure_voltage_reference configure_voltage_reference `T(v  1 s 1 configure_voltage_reference ]
 "296
 [v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
-"252 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
+"25 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
+[v _CCP_Init CCP_Init `(uc  1 e 1 0 ]
+"252
 [v _CCP1_ISR CCP1_ISR `(v  1 e 1 0 ]
 "260
 [v _CCP2_ISR CCP2_ISR `(v  1 e 1 0 ]
@@ -470,66 +461,44 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _Timer1_Mode_Select Timer1_Mode_Select `T(v  1 s 1 Timer1_Mode_Select ]
 "95 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Timer2/hal_timr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
-"102 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Timer3/hal_timr3.c
+"17 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Timer3/hal_timr3.c
+[v _Timer3_Init Timer3_Init `(uc  1 e 1 0 ]
+"102
 [v _TMR3_ISR TMR3_ISR `(v  1 e 1 0 ]
 "111
 [v _Timer3_Mode_Select Timer3_Mode_Select `T(v  1 s 1 Timer3_Mode_Select ]
-"21 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
-[v _EUSART_ASYNC_Init EUSART_ASYNC_Init `(uc  1 e 1 0 ]
-"77
+"77 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
 [v _EUSART_ASYNC_WriteByteBlocking EUSART_ASYNC_WriteByteBlocking `(uc  1 e 1 0 ]
-"87
-[v _EUSART_ASYNC_WriteStringBlocking EUSART_ASYNC_WriteStringBlocking `(uc  1 e 1 0 ]
-"136
+"104
 [v _EUSART_Baud_Rate_Calculation EUSART_Baud_Rate_Calculation `(v  1 s 1 EUSART_Baud_Rate_Calculation ]
-"179
+"147
 [v _EUSART_ASYNC_TX_Init EUSART_ASYNC_TX_Init `(v  1 s 1 EUSART_ASYNC_TX_Init ]
-"226
+"194
 [v _EUSART_ASYNC_RX_Init EUSART_ASYNC_RX_Init `(v  1 s 1 EUSART_ASYNC_RX_Init ]
-"275
+"243
 [v _EUSART_TX_ISR EUSART_TX_ISR `(v  1 e 1 0 ]
-"282
+"250
 [v _EUSART_RX_ISR EUSART_RX_ISR `(v  1 e 1 0 ]
-"10 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
-[v _ret ret `uc  1 e 1 0 ]
-"21
-[v _hour hour `uc  1 e 1 0 ]
-[v _min min `uc  1 e 1 0 ]
-[v _sec sec `uc  1 e 1 0 ]
-[v _KeypadPressed KeypadPressed `uc  1 e 1 0 ]
-"22
-[v _time time `[6]uc  1 e 6 0 ]
-"23
-[v _pressFlag pressFlag `uc  1 e 1 0 ]
+[s S3714 . 6 `*.37(v 1 TMR3_InterruptHandler 2 0 `E2993 1 priority 1 2 `us 1 timer3_preload_value 2 3 `uc 1 timer3_prescaler_value 1 5 :2:0 
+`uc 1 timer3_mode 1 5 :1:2 
+`uc 1 timer3_counter_mode 1 5 :1:3 
+`uc 1 timer3_reg_wr_mode 1 5 :1:4 
+`uc 1 timer1_reserved 1 5 :3:5 
+]
+"11 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+[v _timer3_obj timer3_obj `S3714  1 e 6 0 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
-"26
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v _lcd_1 lcd_1 `S117  1 e 6 0 ]
-"61
-[s S440 . 8 `[4]S24 1 keypad_row_pins 4 0 `[4]S24 1 keypad_columns_pins 4 4 ]
-[v _keypad_1 keypad_1 `S440  1 e 8 0 ]
-[s S3885 . 2 `E2993 1 usart_tx_int_priority 1 0 `uc 1 usart_tx_enable 1 1 :1:0 
-`uc 1 usart_tx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_tx_9bit_enable 1 1 :1:2 
-`uc 1 usart_tx_reserved 1 1 :5:3 
-]
-"105
-[s S3891 . 2 `E2993 1 usart_rx_int_priority 1 0 `uc 1 usart_rx_enable 1 1 :1:0 
-`uc 1 usart_rx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_rx_9bit_enable 1 1 :1:2 
-`uc 1 usart_rx_reserved 1 1 :5:3 
-]
-[s S3897 . 1 `uc 1 usart_tx_reserved 1 0 :6:0 
-`uc 1 usart_ferr 1 0 :1:6 
-`uc 1 usart_oerr 1 0 :1:7 
-]
-[u S3901 . 1 `S3897 1 . 1 0 `uc 1 status 1 0 ]
-[s S3908 . 18 `ul 1 baudrate 4 0 `E2997 1 baudrate_gen_gonfig 1 4 `S3885 1 usart_tx_cfg 2 5 `S3891 1 usart_rx_cfg 2 7 `S3901 1 error_status 1 9 `*.37(v 1 EUSART_TxDefaultInterruptHandler 2 10 `*.37(v 1 EUSART_RxDefaultInterruptHandler 2 12 `*.37(v 1 EUSART_FramingErrorHandler 2 14 `*.37(v 1 EUSART_OverrunErrorHandler 2 16 ]
-[v _usart_1 usart_1 `S3908  1 e 18 0 ]
+"12
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v _ccp_obj ccp_obj `S1124  1 e 17 0 ]
+"14
+[v _CCP1_Second_Copture_Flag CCP1_Second_Copture_Flag `VEuc  1 e 1 0 ]
+"16
+[v _Timer3_OverFlow Timer3_OverFlow `VEul  1 e 4 0 ]
 "52 C:/Users/mohmm/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -1143,8 +1112,6 @@ INTERRUPT_HIGH_PRIORITY 1
 ]
 [u S839 . 1 `S817 1 . 1 0 `S826 1 . 1 0 `S835 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES839  1 e 1 @4082 ]
-"10 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/KeyPad/ecu_keypad.c
-[v _btn_values btn_values `C[4][4]uc  1 s 16 btn_values ]
 "11 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/ADC/hal_adc.c
 [v _ADC_InterruptHandler ADC_InterruptHandler `*.37(v  1 s 2 ADC_InterruptHandler ]
 "12 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
@@ -1214,458 +1181,257 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 s 2 EUSART_FramingErrorHandler ]
 "14
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 s 2 EUSART_OverrunErrorHandler ]
-"126 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+"28 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"163
+"55
 } 0
-"248
-[v _getSeconds getSeconds `(v  1 e 1 0 ]
-{
-"272
-} 0
-"221
-[v _getMinutes getMinutes `(v  1 e 1 0 ]
-{
-"245
-} 0
-"194
-[v _getHoures getHoures `(v  1 e 1 0 ]
-{
-"218
-} 0
-"120 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/Chr_LCD/ecu_chr_lcd.c
-[v _lcd_4bit_send_char_data_pos lcd_4bit_send_char_data_pos `(uc  1 e 1 0 ]
-{
-"121
-[v lcd_4bit_send_char_data_pos@ret ret `uc  1 a 1 31 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"120
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_send_char_data_pos@lcd lcd `*.39CS117  1 p 2 26 ]
-[v lcd_4bit_send_char_data_pos@row row `uc  1 p 1 28 ]
-[v lcd_4bit_send_char_data_pos@column column `uc  1 p 1 29 ]
-[v lcd_4bit_send_char_data_pos@data data `uc  1 p 1 30 ]
-"130
-} 0
-"49 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/KeyPad/ecu_keypad.c
-[v _keypad_get_value keypad_get_value `(uc  1 e 1 0 ]
-{
-"51
-[v keypad_get_value@l_columns_counter l_columns_counter `uc  1 a 1 21 ]
-[v keypad_get_value@l_rows_counter l_rows_counter `uc  1 a 1 20 ]
-[v keypad_get_value@l_counter l_counter `uc  1 a 1 19 ]
-"52
-[v keypad_get_value@column_logic column_logic `uc  1 a 1 18 ]
-"50
-[v keypad_get_value@ret ret `uc  1 a 1 17 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"49
-[s S440 . 8 `[4]S24 1 keypad_row_pins 4 0 `[4]S24 1 keypad_columns_pins 4 4 ]
-[v keypad_get_value@_keypad_obj _keypad_obj `*.39CS440  1 p 2 11 ]
-[v keypad_get_value@value value `*.39uc  1 p 2 13 ]
-"72
-} 0
-"104 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/GPIO/hal_gpio.c
-[v _gpio_pin_read_logic gpio_pin_read_logic `(uc  1 e 1 0 ]
-{
-"105
-[v gpio_pin_read_logic@ret ret `uc  1 a 1 10 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"104
-[v gpio_pin_read_logic@_pin_config _pin_config `*.39CS24  1 p 2 1 ]
-[v gpio_pin_read_logic@logic logic `*.39E2933  1 p 2 3 ]
-"113
-} 0
-"166 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
-[v _calcTime calcTime `(v  1 e 1 0 ]
-{
-"171
-} 0
-"281
+"57
 [v _application_intialize application_intialize `(v  1 e 1 0 ]
 {
-"286
+"60
 } 0
-"23 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/Chr_LCD/ecu_chr_lcd.c
-[v _lcd_4bit_intialize lcd_4bit_intialize `(uc  1 e 1 0 ]
+"10 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/ecu_layer_init.c
+[v _ecu_layer_intialize ecu_layer_intialize `(v  1 e 1 0 ]
 {
-"24
-[v lcd_4bit_intialize@ret ret `uc  1 a 1 24 ]
-"25
-[v lcd_4bit_intialize@l_data_pins_counter l_data_pins_counter `uc  1 a 1 23 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"23
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_intialize@lcd lcd `*.39CS117  1 p 2 19 ]
-"50
+"13
 } 0
-"24 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/KeyPad/ecu_keypad.c
-[v _keypad_initialize keypad_initialize `(uc  1 e 1 0 ]
+"17 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Timer3/hal_timr3.c
+[v _Timer3_Init Timer3_Init `(uc  1 e 1 0 ]
+{
+"18
+[v Timer3_Init@ret ret `uc  1 a 1 9 ]
+[s S3714 . 6 `*.37(v 1 TMR3_InterruptHandler 2 0 `E2993 1 priority 1 2 `us 1 timer3_preload_value 2 3 `uc 1 timer3_prescaler_value 1 5 :2:0 
+`uc 1 timer3_mode 1 5 :1:2 
+`uc 1 timer3_counter_mode 1 5 :1:3 
+`uc 1 timer3_reg_wr_mode 1 5 :1:4 
+`uc 1 timer1_reserved 1 5 :3:5 
+]
+"17
+[v Timer3_Init@_timer _timer `*.39CS3714  1 p 2 5 ]
+"57
+} 0
+"111
+[v _Timer3_Mode_Select Timer3_Mode_Select `T(v  1 s 1 Timer3_Mode_Select ]
+{
+[s S3714 . 6 `*.37(v 1 TMR3_InterruptHandler 2 0 `E2993 1 priority 1 2 `us 1 timer3_preload_value 2 3 `uc 1 timer3_prescaler_value 1 5 :2:0 
+`uc 1 timer3_mode 1 5 :1:2 
+`uc 1 timer3_counter_mode 1 5 :1:3 
+`uc 1 timer3_reg_wr_mode 1 5 :1:4 
+`uc 1 timer1_reserved 1 5 :3:5 
+]
+[v Timer3_Mode_Select@_timer _timer `*.39CS3714  1 p 2 3 ]
+"126
+} 0
+"25 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
+[v _CCP_Init CCP_Init `(uc  1 e 1 0 ]
 {
 "26
-[v keypad_initialize@columns_counter columns_counter `uc  1 a 1 21 ]
-[v keypad_initialize@rows_counter rows_counter `uc  1 a 1 20 ]
-"25
-[v keypad_initialize@ret ret `uc  1 a 1 19 ]
+[v CCP_Init@ret ret `uc  1 a 1 2 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
-"24
-[s S440 . 8 `[4]S24 1 keypad_row_pins 4 0 `[4]S24 1 keypad_columns_pins 4 4 ]
-[v keypad_initialize@_keypad_obj _keypad_obj `*.39CS440  1 p 2 15 ]
-"39
+"25
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_Init@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 0 ]
+"73
 } 0
 "144 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/GPIO/hal_gpio.c
 [v _gpio_pin_intialize gpio_pin_intialize `(uc  1 e 1 0 ]
 {
 "145
-[v gpio_pin_intialize@ret ret `uc  1 a 1 14 ]
+[v gpio_pin_intialize@ret ret `uc  1 a 1 16 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
 "144
-[v gpio_pin_intialize@_pin_config _pin_config `*.39CS24  1 p 2 11 ]
+[v gpio_pin_intialize@_pin_config _pin_config `*.39CS24  1 p 2 13 ]
 "154
 } 0
-"25
-[v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
-{
-"26
-[v gpio_pin_direction_intialize@ret ret `uc  1 a 1 9 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"25
-[v gpio_pin_direction_intialize@_pin_config _pin_config `*.39CS24  1 p 2 1 ]
-"42
-} 0
-"21 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
-[v _EUSART_ASYNC_Init EUSART_ASYNC_Init `(uc  1 e 1 0 ]
-{
-"22
-[v EUSART_ASYNC_Init@ret ret `uc  1 a 1 70 ]
-[s S3885 . 2 `E2993 1 usart_tx_int_priority 1 0 `uc 1 usart_tx_enable 1 1 :1:0 
-`uc 1 usart_tx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_tx_9bit_enable 1 1 :1:2 
-`uc 1 usart_tx_reserved 1 1 :5:3 
-]
-"21
-[s S3891 . 2 `E2993 1 usart_rx_int_priority 1 0 `uc 1 usart_rx_enable 1 1 :1:0 
-`uc 1 usart_rx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_rx_9bit_enable 1 1 :1:2 
-`uc 1 usart_rx_reserved 1 1 :5:3 
-]
-[s S3897 . 1 `uc 1 usart_tx_reserved 1 0 :6:0 
-`uc 1 usart_ferr 1 0 :1:6 
-`uc 1 usart_oerr 1 0 :1:7 
-]
-[u S3901 . 1 `S3897 1 . 1 0 `uc 1 status 1 0 ]
-[s S3908 . 18 `ul 1 baudrate 4 0 `E2997 1 baudrate_gen_gonfig 1 4 `S3885 1 usart_tx_cfg 2 5 `S3891 1 usart_rx_cfg 2 7 `S3901 1 error_status 1 9 `*.37(v 1 EUSART_TxDefaultInterruptHandler 2 10 `*.37(v 1 EUSART_RxDefaultInterruptHandler 2 12 `*.37(v 1 EUSART_FramingErrorHandler 2 14 `*.37(v 1 EUSART_OverrunErrorHandler 2 16 ]
-[v EUSART_ASYNC_Init@_eusart _eusart `*.39CS3908  1 p 2 68 ]
-"37
-} 0
-"136
-[v _EUSART_Baud_Rate_Calculation EUSART_Baud_Rate_Calculation `(v  1 s 1 EUSART_Baud_Rate_Calculation ]
-{
-"137
-[v EUSART_Baud_Rate_Calculation@Baud_Rate_Temp Baud_Rate_Temp `f  1 a 4 60 ]
-[s S3885 . 2 `E2993 1 usart_tx_int_priority 1 0 `uc 1 usart_tx_enable 1 1 :1:0 
-`uc 1 usart_tx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_tx_9bit_enable 1 1 :1:2 
-`uc 1 usart_tx_reserved 1 1 :5:3 
-]
-"136
-[s S3891 . 2 `E2993 1 usart_rx_int_priority 1 0 `uc 1 usart_rx_enable 1 1 :1:0 
-`uc 1 usart_rx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_rx_9bit_enable 1 1 :1:2 
-`uc 1 usart_rx_reserved 1 1 :5:3 
-]
-[s S3897 . 1 `uc 1 usart_tx_reserved 1 0 :6:0 
-`uc 1 usart_ferr 1 0 :1:6 
-`uc 1 usart_oerr 1 0 :1:7 
-]
-[u S3901 . 1 `S3897 1 . 1 0 `uc 1 status 1 0 ]
-[s S3908 . 18 `ul 1 baudrate 4 0 `E2997 1 baudrate_gen_gonfig 1 4 `S3885 1 usart_tx_cfg 2 5 `S3891 1 usart_rx_cfg 2 7 `S3901 1 error_status 1 9 `*.37(v 1 EUSART_TxDefaultInterruptHandler 2 10 `*.37(v 1 EUSART_RxDefaultInterruptHandler 2 12 `*.37(v 1 EUSART_FramingErrorHandler 2 14 `*.37(v 1 EUSART_OverrunErrorHandler 2 16 ]
-[v EUSART_Baud_Rate_Calculation@_eusart _eusart `*.39CS3908  1 p 2 56 ]
-"177
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 11 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 10 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 1 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 9 ]
-"44
-} 0
-"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 1 ]
-"70
-} 0
-"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 34 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 27 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 32 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 39 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 38 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 31 ]
-"11
-[v ___fldiv@b b `d  1 p 4 15 ]
-[v ___fldiv@a a `d  1 p 4 19 ]
-"185
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 55 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 54 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 53 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 52 ]
-"10
-[v ___fladd@b b `d  1 p 4 40 ]
-[v ___fladd@a a `d  1 p 4 44 ]
-"237
-} 0
-"179 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
-[v _EUSART_ASYNC_TX_Init EUSART_ASYNC_TX_Init `(v  1 s 1 EUSART_ASYNC_TX_Init ]
-{
-[s S3885 . 2 `E2993 1 usart_tx_int_priority 1 0 `uc 1 usart_tx_enable 1 1 :1:0 
-`uc 1 usart_tx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_tx_9bit_enable 1 1 :1:2 
-`uc 1 usart_tx_reserved 1 1 :5:3 
-]
-[s S3891 . 2 `E2993 1 usart_rx_int_priority 1 0 `uc 1 usart_rx_enable 1 1 :1:0 
-`uc 1 usart_rx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_rx_9bit_enable 1 1 :1:2 
-`uc 1 usart_rx_reserved 1 1 :5:3 
-]
-[s S3897 . 1 `uc 1 usart_tx_reserved 1 0 :6:0 
-`uc 1 usart_ferr 1 0 :1:6 
-`uc 1 usart_oerr 1 0 :1:7 
-]
-[u S3901 . 1 `S3897 1 . 1 0 `uc 1 status 1 0 ]
-[s S3908 . 18 `ul 1 baudrate 4 0 `E2997 1 baudrate_gen_gonfig 1 4 `S3885 1 usart_tx_cfg 2 5 `S3891 1 usart_rx_cfg 2 7 `S3901 1 error_status 1 9 `*.37(v 1 EUSART_TxDefaultInterruptHandler 2 10 `*.37(v 1 EUSART_RxDefaultInterruptHandler 2 12 `*.37(v 1 EUSART_FramingErrorHandler 2 14 `*.37(v 1 EUSART_OverrunErrorHandler 2 16 ]
-[v EUSART_ASYNC_TX_Init@_eusart _eusart `*.39CS3908  1 p 2 1 ]
-"224
-} 0
-"226
-[v _EUSART_ASYNC_RX_Init EUSART_ASYNC_RX_Init `(v  1 s 1 EUSART_ASYNC_RX_Init ]
-{
-[s S3885 . 2 `E2993 1 usart_tx_int_priority 1 0 `uc 1 usart_tx_enable 1 1 :1:0 
-`uc 1 usart_tx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_tx_9bit_enable 1 1 :1:2 
-`uc 1 usart_tx_reserved 1 1 :5:3 
-]
-[s S3891 . 2 `E2993 1 usart_rx_int_priority 1 0 `uc 1 usart_rx_enable 1 1 :1:0 
-`uc 1 usart_rx_interrupt_enable 1 1 :1:1 
-`uc 1 usart_rx_9bit_enable 1 1 :1:2 
-`uc 1 usart_rx_reserved 1 1 :5:3 
-]
-[s S3897 . 1 `uc 1 usart_tx_reserved 1 0 :6:0 
-`uc 1 usart_ferr 1 0 :1:6 
-`uc 1 usart_oerr 1 0 :1:7 
-]
-[u S3901 . 1 `S3897 1 . 1 0 `uc 1 status 1 0 ]
-[s S3908 . 18 `ul 1 baudrate 4 0 `E2997 1 baudrate_gen_gonfig 1 4 `S3885 1 usart_tx_cfg 2 5 `S3891 1 usart_rx_cfg 2 7 `S3901 1 error_status 1 9 `*.37(v 1 EUSART_TxDefaultInterruptHandler 2 10 `*.37(v 1 EUSART_RxDefaultInterruptHandler 2 12 `*.37(v 1 EUSART_FramingErrorHandler 2 14 `*.37(v 1 EUSART_OverrunErrorHandler 2 16 ]
-[v EUSART_ASYNC_RX_Init@_eusart _eusart `*.39CS3908  1 p 2 1 ]
-"273
-} 0
-"274 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
-[v _WelcomingMessage WelcomingMessage `(v  1 e 1 0 ]
-{
-"279
-} 0
-"174
-[v _TimeValidation TimeValidation `(v  1 e 1 0 ]
-{
-"189
-} 0
-"289
-[v _usartSend usartSend `(v  1 e 1 0 ]
-{
-"291
-[v usartSend@arrayTime arrayTime `[4]uc  1 a 4 9 ]
-"297
-} 0
-"87 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
-[v _EUSART_ASYNC_WriteStringBlocking EUSART_ASYNC_WriteStringBlocking `(uc  1 e 1 0 ]
-{
-"89
-[v EUSART_ASYNC_WriteStringBlocking@char_counter char_counter `us  1 a 2 7 ]
-"88
-[v EUSART_ASYNC_WriteStringBlocking@ret ret `uc  1 a 1 6 ]
-"87
-[v EUSART_ASYNC_WriteStringBlocking@_data _data `*.39uc  1 p 2 2 ]
-[v EUSART_ASYNC_WriteStringBlocking@str_len str_len `us  1 p 2 4 ]
-"94
-} 0
-"77
-[v _EUSART_ASYNC_WriteByteBlocking EUSART_ASYNC_WriteByteBlocking `(uc  1 e 1 0 ]
-{
-[v EUSART_ASYNC_WriteByteBlocking@_data _data `uc  1 a 1 wreg ]
-[v EUSART_ASYNC_WriteByteBlocking@_data _data `uc  1 a 1 wreg ]
-[v EUSART_ASYNC_WriteByteBlocking@_data _data `uc  1 a 1 1 ]
-"85
-} 0
-"163 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\ECU_Layer/Chr_LCD/ecu_chr_lcd.c
-[v _lcd_4bit_send_string_pos lcd_4bit_send_string_pos `(uc  1 e 1 0 ]
-{
-"164
-[v lcd_4bit_send_string_pos@ret ret `uc  1 a 1 32 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"163
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_send_string_pos@lcd lcd `*.39CS117  1 p 2 26 ]
-[v lcd_4bit_send_string_pos@row row `uc  1 p 1 28 ]
-[v lcd_4bit_send_string_pos@column column `uc  1 p 1 29 ]
-[v lcd_4bit_send_string_pos@str str `*.32uc  1 p 2 30 ]
-"175
-} 0
-"535
-[v _lcd_4bit_set_cursor lcd_4bit_set_cursor `(uc  1 s 1 lcd_4bit_set_cursor ]
-{
-"536
-[v lcd_4bit_set_cursor@ret ret `uc  1 a 1 25 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"535
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_set_cursor@lcd lcd `*.39CS117  1 p 2 19 ]
-[v lcd_4bit_set_cursor@row row `uc  1 p 1 21 ]
-[v lcd_4bit_set_cursor@coulmn coulmn `uc  1 p 1 22 ]
-"546
-} 0
-"60
-[v _lcd_4bit_send_command lcd_4bit_send_command `(uc  1 e 1 0 ]
-{
-"61
-[v lcd_4bit_send_command@ret ret `uc  1 a 1 18 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"60
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_send_command@lcd lcd `*.39CS117  1 p 2 15 ]
-[v lcd_4bit_send_command@command command `uc  1 p 1 17 ]
-"79
-} 0
-"89
-[v _lcd_4bit_send_char_data lcd_4bit_send_char_data `(uc  1 e 1 0 ]
-{
-"90
-[v lcd_4bit_send_char_data@ret ret `uc  1 a 1 18 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"89
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_send_char_data@lcd lcd `*.39CS117  1 p 2 15 ]
-[v lcd_4bit_send_char_data@data data `uc  1 p 1 17 ]
-"108
-} 0
-"465
-[v _lcd_send_4bits lcd_send_4bits `(uc  1 s 1 lcd_send_4bits ]
-{
-"466
-[v lcd_send_4bits@ret ret `uc  1 a 1 14 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"465
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_send_4bits@lcd lcd `*.39CS117  1 p 2 11 ]
-[v lcd_send_4bits@_data_command _data_command `uc  1 p 1 13 ]
-"472
-} 0
-"481
-[v _lcd_4bit_send_enable_signal lcd_4bit_send_enable_signal `(uc  1 s 1 lcd_4bit_send_enable_signal ]
-{
-"482
-[v lcd_4bit_send_enable_signal@ret ret `uc  1 a 1 13 ]
-[s S24 . 1 `uc 1 port 1 0 :3:0 
-`uc 1 pin 1 0 :3:3 
-`uc 1 direction 1 0 :1:6 
-`uc 1 logic 1 0 :1:7 
-]
-"481
-[s S117 . 6 `S24 1 lcd_rs 1 0 `S24 1 lcd_en 1 1 `[4]S24 1 lcd_data 4 2 ]
-[v lcd_4bit_send_enable_signal@lcd lcd `*.39CS117  1 p 2 11 ]
-"487
-} 0
-"75 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/GPIO/hal_gpio.c
+"75
 [v _gpio_pin_write_logic gpio_pin_write_logic `(uc  1 e 1 0 ]
 {
 "76
-[v gpio_pin_write_logic@ret ret `uc  1 a 1 10 ]
+[v gpio_pin_write_logic@ret ret `uc  1 a 1 12 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
 "75
-[v gpio_pin_write_logic@_pin_config _pin_config `*.39CS24  1 p 2 1 ]
-[v gpio_pin_write_logic@logic logic `E2933  1 p 1 3 ]
+[v gpio_pin_write_logic@_pin_config _pin_config `*.39CS24  1 p 2 3 ]
+[v gpio_pin_write_logic@logic logic `E2933  1 p 1 5 ]
 "92
+} 0
+"25
+[v _gpio_pin_direction_intialize gpio_pin_direction_intialize `(uc  1 e 1 0 ]
+{
+"26
+[v gpio_pin_direction_intialize@ret ret `uc  1 a 1 11 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"25
+[v gpio_pin_direction_intialize@_pin_config _pin_config `*.39CS24  1 p 2 3 ]
+"42
+} 0
+"269 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
+[v _CCP_PWM_Mode_Config CCP_PWM_Mode_Config `(v  1 s 1 CCP_PWM_Mode_Config ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_PWM_Mode_Config@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 93 ]
+"287
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 13 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 12 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 3 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 11 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 92 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 91 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 83 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S4733 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S4738 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S4741 . 4 `l 1 i 4 0 `d 1 f 4 0 `S4733 1 fAsBytes 4 0 `S4738 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S4741  1 a 4 36 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 31 ]
+[s S4809 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S4812 . 2 `s 1 i 2 0 `us 1 n 2 0 `S4809 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S4812  1 a 2 40 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 35 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 30 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 29 ]
+"8
+[v ___flmul@b b `d  1 p 4 17 ]
+[v ___flmul@a a `d  1 p 4 21 ]
+"205
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 61 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 54 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 59 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 66 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 65 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 58 ]
+"11
+[v ___fldiv@b b `d  1 p 4 42 ]
+[v ___fldiv@a a `d  1 p 4 46 ]
+"185
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 82 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 81 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 80 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 79 ]
+"10
+[v ___fladd@b b `d  1 p 4 67 ]
+[v ___fladd@a a `d  1 p 4 71 ]
+"237
+} 0
+"290 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
+[v _CCP_Interrupt_Config CCP_Interrupt_Config `(v  1 s 1 CCP_Interrupt_Config ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_Interrupt_Config@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 3 ]
+"340
+} 0
+"392
+[v _CCP_Compare_Mode_Config CCP_Compare_Mode_Config `(uc  1 s 1 CCP_Compare_Mode_Config ]
+{
+"393
+[v CCP_Compare_Mode_Config@ret ret `uc  1 a 1 10 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"392
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_Compare_Mode_Config@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 6 ]
+"422
+} 0
+"362
+[v _CCP_Capture_Mode_Config CCP_Capture_Mode_Config `(uc  1 s 1 CCP_Capture_Mode_Config ]
+{
+"363
+[v CCP_Capture_Mode_Config@ret ret `uc  1 a 1 10 ]
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+"362
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_Capture_Mode_Config@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 6 ]
+"390
+} 0
+"342
+[v _CCP_Mode_Timer_Select CCP_Mode_Timer_Select `(v  1 s 1 CCP_Mode_Timer_Select ]
+{
+[s S24 . 1 `uc 1 port 1 0 :3:0 
+`uc 1 pin 1 0 :3:3 
+`uc 1 direction 1 0 :1:6 
+`uc 1 logic 1 0 :1:7 
+]
+[s S1124 . 17 `E3011 1 ccp_inst 1 0 `E2997 1 ccp_mode 1 1 `uc 1 ccp_mode_variant 1 2 `S24 1 ccp_pin 1 3 `E3015 1 ccp_capture_timer 1 4 `ul 1 PWM_Frequency 4 5 `uc 1 timer2_postscaler_value 1 9 `uc 1 timer2_prescaler_value 1 10 `*.37(v 1 CCP1_InterruptHandler 2 11 `E2993 1 CCP1_priority 1 13 `*.37(v 1 CCP2_InterruptHandler 2 14 `E2993 1 CCP2_priority 1 16 ]
+[v CCP_Mode_Timer_Select@_ccp_obj _ccp_obj `*.39CS1124  1 p 2 3 ]
+"360
 } 0
 "32 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Interrupt/mcal_interrupt_manager.c
 [v _InterruptManager InterruptManager `IIH(v  1 e 1 0 ]
@@ -1676,6 +1442,11 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _TMR3_ISR TMR3_ISR `(v  1 e 1 0 ]
 {
 "109
+} 0
+"24 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+[v _Timer3_DefaultInterruptHandler Timer3_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"26
 } 0
 "95 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/Timer2/hal_timr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
@@ -1758,15 +1529,15 @@ INTERRUPT_HIGH_PRIORITY 1
 {
 "81
 } 0
-"275 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
+"243 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/usart/hal_usart.c
 [v _EUSART_TX_ISR EUSART_TX_ISR `(v  1 e 1 0 ]
 {
-"280
+"248
 } 0
-"282
+"250
 [v _EUSART_RX_ISR EUSART_RX_ISR `(v  1 e 1 0 ]
 {
-"292
+"260
 } 0
 "260 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/CCP/hal_ccp.c
 [v _CCP2_ISR CCP2_ISR `(v  1 e 1 0 ]
@@ -1777,6 +1548,11 @@ INTERRUPT_HIGH_PRIORITY 1
 [v _CCP1_ISR CCP1_ISR `(v  1 e 1 0 ]
 {
 "258
+} 0
+"20 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\application.c
+[v _CCP1_DefaultInterruptHandler CCP1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"22
 } 0
 "296 E:\ENG AbdElghafar\02 _Microcontroller_Interfacing\Latest Drivers\Record_203\MCAL_Layer/ADC/hal_adc.c
 [v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]

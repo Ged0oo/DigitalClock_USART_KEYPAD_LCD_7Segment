@@ -4721,7 +4721,7 @@ Std_ReturnType keypad_get_value(const keypad_t *_keypad_obj, uint8 *value){
                 ret = gpio_pin_write_logic(&(_keypad_obj->keypad_row_pins[l_counter]), GPIO_LOW);
             }
             gpio_pin_write_logic(&(_keypad_obj->keypad_row_pins[l_rows_counter]), GPIO_HIGH);
-            _delay((unsigned long)((10)*(8000000UL/4000.0)));
+            _delay((unsigned long)((10)*(4000000UL/4000.0)));
             for(l_columns_counter=0; l_columns_counter<4; l_columns_counter++){
                 ret = gpio_pin_read_logic(&(_keypad_obj->keypad_columns_pins[l_columns_counter]), &column_logic);
                 if(GPIO_HIGH == column_logic){

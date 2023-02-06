@@ -1,8 +1,8 @@
-/* 
+ /* 
  * File:   device_config.c
- * Author: Ahmed.Elghafar
- *
- * Created on November 28, 2020, 10:29 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #include "device_config.h"

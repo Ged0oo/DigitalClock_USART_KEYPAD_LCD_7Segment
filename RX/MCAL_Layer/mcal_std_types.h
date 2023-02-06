@@ -1,9 +1,10 @@
-/* 
+ /* 
  * File:   mcal_std_types.h
- * Author: Ahmed.Elghafar
- * https://www.linkedin.com/in/ahmedabdelghafarmohammed/
- * Created on November 28, 2020, 9:42 PM
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
+ 
 
 #ifndef MCAL_STD_TYPES_H
 #define	MCAL_STD_TYPES_H

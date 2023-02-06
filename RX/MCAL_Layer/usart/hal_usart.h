@@ -1,6 +1,8 @@
-/* 
+ /* 
  * File:   hal_usart.h
- * Author: Ahmed Abd El-Ghafar
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef HAL_USART_H
@@ -117,7 +119,4 @@ Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data, uint16 str_len);
 Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data);
 Std_ReturnType EUSART_ASYNC_WriteStringNonBlocking(uint8 *_data, uint16 str_len);
 
-
-
-void USART_Read_string(char *buffer, unsigned char len);
 #endif	/* HAL_USART_H */

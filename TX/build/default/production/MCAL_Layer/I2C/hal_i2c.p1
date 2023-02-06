@@ -1424,8 +1424,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MCAL_Layer/I2C/hal_i2c.c: 267:     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
 [e = . . _SSPCON1bits 0 0 . . *U _i2c_obj 1 0 ]
 "268
-[; ;MCAL_Layer/I2C/hal_i2c.c: 268:     SSPADD = (uint8)(((8000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
-[e = _SSPADD -> - / / -> -> 8000000 `ul `d .4.0 -> . *U _i2c_obj 0 `d -> -> 1 `i `d `uc ]
+[; ;MCAL_Layer/I2C/hal_i2c.c: 268:     SSPADD = (uint8)(((4000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
+[e = _SSPADD -> - / / -> -> 4000000 `ul `d .4.0 -> . *U _i2c_obj 0 `d -> -> 1 `i `d `uc ]
 "269
 [; ;MCAL_Layer/I2C/hal_i2c.c: 269: }
 [e :UE 355 ]

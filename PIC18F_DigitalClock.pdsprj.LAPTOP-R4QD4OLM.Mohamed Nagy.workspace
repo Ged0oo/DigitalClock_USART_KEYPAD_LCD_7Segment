@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff8c0000000d000000f50600002c040000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff8c0000000d000000f50600002c040000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="25400000" mode="00000010" zoom="-1" scale="75" flipped="0" gridminor="508000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="169333">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="141" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
     <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
-    <centre x="-5588000" y="-1761067"/>
+    <centre x="-5933872" y="217972"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -18,9 +18,9 @@
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="25400000" mode="00000010" zoom="-1" scale="75" flipped="0" gridminor="508000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="169333">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="141" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
    <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
-   <centre x="-5588000" y="-1761067"/>
+   <centre x="-5933872" y="217972"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
@@ -35,18 +35,19 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="435" x="68" flags="00008033" y="180" h="300" pid="1" iid="-1">
+   <POPUP w="435" x="68" flags="00008033" y="180" h="323" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">82</ITEM>
      <ITEM name="AutoResize">No</ITEM>
      <ITEM name="Gridlines">Yes</ITEM>
-     <ITEM name="Item 0">"KeypadPressed","0x007B",0000000E,00000004,123,1,4,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 1">"counter","0x0039",0000000E,00000004,57,1,4,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 2">"time","0x00A6",0000000E,00000004,166,6,-1,DA730000,0,00000000,00000000</ITEM>
-     <ITEM name="Item 3">"sec_1","0x0044",0000000E,00000004,68,1,4,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 4">"sec_2","0x0043",0000000E,00000004,67,1,4,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 5">"min_1","0x0042",0000000E,00000004,66,1,4,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 6">"min_2","0x0041",0000000E,00000004,65,1,4,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 0">"hour","0x0069",0000000E,00000004,105,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"min","0x0068",0000000E,00000004,104,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 2">"sec","0x0067",0000000E,00000004,103,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 3">"KeypadPressed","0x007B",0000000E,00000004,123,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 4">"time","0x009E",0000000E,00000004,158,6,-1,DA730000,0,00000000,00000000</ITEM>
+     <ITEM name="Item 5">"hour","0x0066",00000001,00000004,102,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 6">"min","0x0065",00000001,00000004,101,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 7">"sec","0x0064",00000001,00000004,100,1,6,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Name Column Width">160</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
      <ITEM name="ShowPreviousValues">No</ITEM>
@@ -56,7 +57,7 @@
      <ITEM name="Value Column Width">82</ITEM>
      <ITEM name="Version">100</ITEM>
      <ITEM name="Watch Expression Column Width">82</ITEM>
-     <ITEM name="nItems">3</ITEM>
+     <ITEM name="nItems">8</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="957" x="88" flags="0000000a" y="200" h="400" pid="1" iid="1">
@@ -102,7 +103,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="8" x="188" flags="80000002" y="300" h="16" pid="12" iid="1">
+   <POPUP w="8" x="188" flags="00000002" y="300" h="16" pid="12" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -145,7 +146,7 @@
    <POPUP w="18" x="268" flags="00000008" y="380" h="32" pid="10" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="288" flags="80000002" y="400" h="8" pid="13" iid="1">
+   <POPUP w="8" x="288" flags="00000002" y="400" h="8" pid="13" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -158,7 +159,7 @@
    <POPUP w="960" x="308" flags="0000000b" y="420" h="400" pid="1" iid="14">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="477" x="328" flags="0000000b" y="440" h="372" pid="2" iid="14">
+   <POPUP w="477" x="496" flags="0000000b" y="404" h="372" pid="2" iid="14">
     <PROPERTIES>
      <ITEM name="Address Column Width">93</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -198,7 +199,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="8" x="408" flags="80000002" y="520" h="16" pid="12" iid="14">
+   <POPUP w="8" x="408" flags="00000002" y="520" h="16" pid="12" iid="14">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -241,7 +242,7 @@
    <POPUP w="18" x="488" flags="00000008" y="600" h="32" pid="10" iid="14">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="508" flags="80000002" y="620" h="8" pid="13" iid="14">
+   <POPUP w="8" x="508" flags="00000002" y="620" h="8" pid="13" iid="14">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -249,6 +250,18 @@
      <ITEM name="ShowChanges">Yes</ITEM>
      <ITEM name="ShowToolTips">Yes</ITEM>
      <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="450" x="101" flags="00000023" y="611" h="250" pid="0" iid="15">
+    <PROPERTIES>
+     <ITEM name="AutoEcho">0</ITEM>
+     <ITEM name="HexMode">0</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="450" x="1447" flags="00000023" y="614" h="250" pid="0" iid="16">
+    <PROPERTIES>
+     <ITEM name="AutoEcho">0</ITEM>
+     <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
    </POPUP>
   </PWI>

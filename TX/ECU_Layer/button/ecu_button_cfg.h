@@ -1,8 +1,8 @@
 /* 
- * File:   ecu_button_cfg.h
- * Author: Ahmed.Elghafar
- *
- * Created on January 28, 2021, 7:01 PM
+ * File:   ecu_seven_segment.c
+ * Author: Mohamed_Nagy
+ * https://www.linkedin.com/in/mohamednagyofficial/
+ * Created on January 27, 2022, 8:41 PM
  */
 
 #ifndef ECU_BUTTON_CFG_H
