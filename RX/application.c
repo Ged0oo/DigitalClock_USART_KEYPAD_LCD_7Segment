@@ -14,8 +14,6 @@ void usartTxHandeler();
 Std_ReturnType ret = E_NOT_OK;
 
 
-
-
 uint8 hour=20, min=45, sec=50;
 uint8 counter;
 uint8 keypad_val, keypad_pressed=0;
