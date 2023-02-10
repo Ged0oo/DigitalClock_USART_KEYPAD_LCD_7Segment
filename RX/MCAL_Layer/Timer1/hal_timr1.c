@@ -5,7 +5,7 @@
  * Created on January 27, 2022, 8:41 PM
  */
 
-#include "hal_timr1.h"
+#include "hal_timr1.h" 
 
 #if TIMER1_INTERRUPT_FEATURE_ENABLE==INTERRUPT_FEATURE_ENABLE
     static volatile void (*TMR1_InterruptHandler)(void) = NULL;
